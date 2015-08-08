@@ -1,0 +1,54 @@
+<html>
+
+<body>
+
+
+
+<canvas id="myCanvas" width="512" height="48" style="border:1px solid #c3c3c3;">
+
+Your browser does not support the HTML5 canvas tag.
+
+</canvas>
+
+<textarea rows="1" cols="34">
+
+-&gt; -&gt; -&gt; BroBeur Studios 
+
+
+
+context.drawImage(img_elem, dx, dy);
+
+<script>
+
+
+
+var c=document.getElementById("myCanvas");
+
+var ctx=c.getContext("2d");
+
+ctx.fillStyle="#b3df2a";
+
+ctx.fillRect(50,5,256,40);
+
+var ctd=c.getContext("2d");
+
+ctd.fillStyle="#111111";
+
+ctd.fillRect(128,10,48,24);
+
+
+
+
+
+</script>
+
+<video width="512" height="512" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+
+</source></source></video> 
+
+</textarea></body>
+
+</html>

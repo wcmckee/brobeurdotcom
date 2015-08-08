@@ -1,0 +1,40 @@
+<html><body><p>hello. It has been several months since I've made a post here.
+the windows laptop that the majority of brobeur gamedev was done on was wiped and Linux mint was installed instead. Focus has been on ipython notebook and data processing. 
+
+over the past month I have been joining in jams - usually other peoples team
+
+ill cover them now.
+
+asylum jam.
+
+I received an email from a team looking for an artist - 2d and some 3d skills is always a bonus. 
+
+Perfect. This was the biggest team I had ever worked with on a game - four.
+
+They were using Git for source control but the project was somewhat messy. 
+
+The team were not happy with my bright colors and painting landscapes and people - they wanted more abstract shapes in black and white.
+
+I was very disappointed by the quality of the 3d artists models. They were extremely flat - and awful face scale. Never less - I remodeled his models. sadly the team in the end only used a small squiggle I painted.
+
+Having Unity3d is very important when joining a team using Unity for a jam. I can't expect programmings or other artists to have the level design skills or see my vision!
+
+
+
+If you would like to play it - <a href="http://www.asylumjam.com/submissions/18-crushing-nightmare">Crushing Nightmare</a>. Sorry Linux - web only.
+
+The next game jam I joined - redditbaconjam06.
+
+I had partaked in redditbaconjam05 - producing Surreal Warp Nightmare. 
+
+
+
+I was invited to a team that had two people - a programmer - Rob - and music by Emily.
+
+Rob made a side scroller shooting game. The music was epic. 
+
+This time I decided to focus on level design, with recycling old assets. I sent Rob 3d assets and models to use over the stock images. Sadly he didn't use these. Even sending him a package of art added to the scene didn't work. 
+
+It was a busy weekend and I didn't invest enough time. I emailed Rob after the jam and asked if I could get the final package and work on it further. As of now I have received nothing back. Such as life.
+
+View the entry <a href="http://bacongamejam.org/jams/bacongamejam-06/186/">redditbaconjam06</a></p></body></html>

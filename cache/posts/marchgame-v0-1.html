@@ -1,0 +1,45 @@
+<p>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;
+BroBeur Studios | MarchGame</p>
+<p>&lt;script type=&quot;text/javascript&quot; src=&quot;<a class="reference external" href="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</a>&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;// &lt;![CDATA[</p>
+<dl class="docutils">
+<dt>var unityObjectUrl = &quot;<a class="reference external" href="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js">http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js</a>&quot;;</dt>
+<dd><dl class="first docutils">
+<dt>if (document.location.protocol == 'https:')</dt>
+<dd>unityObjectUrl = unityObjectUrl.replace(&quot;<a class="reference external" href="http://">http://</a>&quot;, &quot;<a class="reference external" href="https://ssl">https://ssl</a>-&quot;);</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 9)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p class="last">document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;' + unityObjectUrl + '&quot;&gt;&lt;/script&gt;');</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 10)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>// ]]&gt;&lt;/script&gt;</p>
+<p>&lt;script type=&quot;text/javascript&quot;&gt;// &lt;![CDATA[</p>
+<p>var config = {                          width: 512,                             height: 512,                            params: { enableDebugging:&quot;0&quot; }                                                         };                      var u = new UnityObject2(config);                       jQuery(function() {                             var $missingScreen = jQuery(&quot;#unityPlayer&quot;).find(&quot;.missing&quot;);                           var $brokenScreen = jQuery(&quot;#unityPlayer&quot;).find(&quot;.broken&quot;);                             $missingScreen.hide();                          $brokenScreen.hide();                                                           u.observeProgress(function (progress) {                                         switch(progress.pluginStatus) {                                                 case &quot;broken&quot;:                                                  $brokenScreen.find(&quot;a&quot;).click(function (e) {                                                            e.stopPropagation();                                                            e.preventDefault();                                                             u.installPlugin();                                                              return false;                                                   });                                                     $brokenScreen.show();                                           break;                                          case &quot;missing&quot;:                                                         $missingScreen.find(&quot;a&quot;).click(function (e) {                                                           e.stopPropagation();                                                            e.preventDefault();                                                             u.installPlugin();                                                              return false;                                                   });                                                     $missingScreen.show();                                          break;                                          case &quot;installed&quot;:                                                       $missingScreen.remove();                                                break;                                          case &quot;first&quot;:                                           break;                                  }                               });                             u.initPlugin(jQuery(&quot;#unityPlayer&quot;)[0], &quot;march-game-0.unity3d&quot;);                        });</p>
+<p>// ]]&gt;&lt;/script&gt;</p>
+<p>&lt;style type=&quot;text/css&quot;&gt;&lt;!--</p>
+<p>body {                  font-family: Helvetica, Verdana, Arial, sans-serif;                     background-color: white;                        color: black;                   text-align: center;             }               a:link, a:visited {                     color: #000;            }               a:active, a:hover {                     color: #666;            }               p.header {                      font-size: small;               }               p.header span {                         font-weight: bold;              }               p.footer {                      font-size: x-small;             }               div.content {                   margin: auto;                   width: 960px;           }               div.broken,             div.missing {                   margin: auto;                   position: relative;                     top: 50%;                       width: 193px;           }               div.broken a,           div.missing a {                         height: 63px;                   position: relative;                     top: -31px;             }               div.broken img,                 div.missing img {                       border-width: 0px;              }               div.broken {                    display: none;          }               div#unityPlayer {                       cursor: default;                        height: 600px;                  width: 960px;           }               --&gt;</p>
+<p>--&gt;&lt;/style&gt;</p>
+<p>&lt;/p&gt;&lt;p class=&quot;header&quot;&gt;&lt;span&gt;&nbsp;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&lt;h1 style=&quot;font-family: monospace; color: #d9af3e; font-size: 48px; text-align: center;&quot;&gt;BroBeur Studios&lt;/h1&gt;</p>
+<p>&lt;h2 style=&quot;font-family: monospace; color: #b7a676; font-size: 24px; text-align: center;&quot;&gt;MarchGame v0.1 Third person platformer.&lt;/h2&gt;</p>
+<p>&lt;h3 style=&quot;font-family: monospace; color: #b7a676; font-size: 24px; text-align: center;&quot;&gt;&lt;a href=&quot;<a class="reference external" href="http://brobeur.com">http://brobeur.com</a>&quot;&gt;home&lt;/a&gt; &lt;a href=&quot;<a class="reference external" href="http://brobeur.com/about/">http://brobeur.com/about/</a>&quot;&gt;about&lt;/a&gt; &lt;a href=&quot;<a class="reference external" href="http://brobeur.com/sign-up/">http://brobeur.com/sign-up/</a>&quot;&gt;sign-up&lt;/a&gt;</p>
+<p>&lt;a href=&quot;<a class="reference external" href="http://brobeur.com/random/">http://brobeur.com/random/</a>&quot;&gt;random&lt;/a&gt;&lt;/h3&gt;</p>
+<p>&lt;p class=&quot;header&quot;&gt;MarchGame v0.1&lt;/p&gt;</p>
+<p>&lt;p class=&quot;header&quot;&gt;&lt;/p&gt;</p>
+<p>&lt;p class=&quot;header&quot;&gt;&lt;a href=&quot;/wp-content/uploads/2013/04/marchGame-1.png&quot;&gt;&lt;img class=&quot;alignnone size-medium wp-image-65&quot; alt=&quot;marchGame-1&quot; src=&quot;/wp-content/uploads/2013/04/marchGame-1-300x300.png&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;&lt;/a&gt;&lt;/p&gt;</p>
+<p>&lt;div class=&quot;content&quot;&gt;</p>
+<p>&lt;div id=&quot;unityPlayer&quot;&gt;</p>
+<p>&lt;div class=&quot;missing&quot;&gt;&lt;a title=&quot;Unity Web Player. Install now!&quot; href=&quot;<a class="reference external" href="http://unity3d.com/webplayer/">http://unity3d.com/webplayer/</a>&quot;&gt;</p>
+<p>&lt;img alt=&quot;Unity Web Player. Install now!&quot; src=&quot;<a class="reference external" href="http://webplayer.unity3d.com/installation/getunity.png">http://webplayer.unity3d.com/installation/getunity.png</a>&quot; width=&quot;193&quot; height=&quot;63&quot;&gt;</p>
+<p>&lt;/a&gt;&lt;/div&gt;</p>
+<p>&lt;div class=&quot;broken&quot;&gt;&lt;a title=&quot;Unity Web Player. Install now! Restart your browser after install.&quot; href=&quot;<a class="reference external" href="http://unity3d.com/webplayer/">http://unity3d.com/webplayer/</a>&quot;&gt;</p>
+<p>&lt;img alt=&quot;Unity Web Player. Install now! Restart your browser after install.&quot; src=&quot;<a class="reference external" href="http://webplayer.unity3d.com/installation/getunityrestart.png">http://webplayer.unity3d.com/installation/getunityrestart.png</a>&quot; width=&quot;193&quot; height=&quot;63&quot;&gt;</p>
+<p>&lt;/a&gt;&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;p class=&quot;footer&quot;&gt;« created with &lt;a title=&quot;Go to unity3d.com&quot; href=&quot;<a class="reference external" href="http://unity3d.com/unity/">http://unity3d.com/unity/</a>&quot;&gt;Unity&lt;/a&gt; »&lt;/p&gt;</p>
+<p>&nbsp;&lt;/body&gt;&lt;/html&gt;</p>

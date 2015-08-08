@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a demo site for Nikola.">
+    <meta name="viewport" content="width=device-width">
+    <title>brobeur (old posts, page 1) | brobeur</title>
+
+    
+            <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+
+    
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+
+      <link rel="canonical" href="http://brobuer.com/index-1.html">
+
+
+
+        <link rel="prev" href="index-2.html" type="text/html">
+
+    
+        <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+
+
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+        <div class="postbox">
+        <h1><a href="posts/twitter-notes-on-game-development-2.html">Twitter notes on game development</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-04T12:42:21+00:00">2013-04-04 12:42</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <p>&lt;html&gt;&lt;body&gt;&lt;p&gt;Let development happen.  Create a website.  Do something new. Explore a color palette.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</p>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/python-reddit-json.html">RedditGetsDrawn - Sagahurtig</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-04T10:08:10+00:00">2013-04-04 10:08</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <p>&lt;html&gt;&lt;body&gt;&lt;p&gt;"ME :)" yelled &lt;a href="<a class="reference external" href="http://www.reddit.com/user/">http://www.reddit.com/user/</a>"&gt;Sagahurtig&lt;/a&gt;, "The score is 3". &lt;img class="alignnone" alt="" src="<a class="reference external" href="http://i.imgur.com/QMp2huv.png">http://i.imgur.com/QMp2huv.png</a>" width="288" height="384"&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</p>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/marchgame-v0-1.html">MarchGame v0.1</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-03T13:22:37+00:00">2013-04-03 13:22</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <div>
+<p>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;
+BroBeur Studios | MarchGame</p>
+<p>&lt;script type="text/javascript" src="<a class="reference external" href="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</a>"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;// &lt;![CDATA[</p>
+<dl class="docutils">
+<dt>var unityObjectUrl = "<a class="reference external" href="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js">http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js</a>";</dt>
+<dd>
+<dl class="first docutils">
+<dt>if (document.location.protocol == 'https:')</dt>
+<dd>unityObjectUrl = unityObjectUrl.replace("<a class="reference external" href="http://">http://</a>", "<a class="reference external" href="https://ssl">https://ssl</a>-");</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 9)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p class="last">document.write('&lt;script type="text/javascript" src="' + unityObjectUrl + '"&gt;&lt;/script&gt;');</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 10)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>// ]]&gt;&lt;/script&gt;</p>
+<p>&lt;script type="text/javascript"&gt;// &lt;![CDATA[</p>
+<p>var config = {                          width: 512,                             height: 512,                            params: { enableDebugging:"0" }                                                         };                      var u = new UnityObject2(config);                       jQuery(function() {                             var $missingScreen = jQuery("#unityPlayer").find(".missing");                           var $brokenScreen = jQuery("#unityPlayer").find(".broken");                             $missingScreen.hide();                          $brokenScreen.hide();                                                           u.observeProgress(function (progress) {                                         switch(progress.pluginStatus) {                                                 case "broken":                                                  $brokenScreen.find("a").click(function (e) {                                                            e.stopPropagation();                                                            e.preventDefault();                                                             u.installPlugin();                                                              return false;                                                   });                                                     $brokenScreen.show();                                           break;                                          case "missing":                                                         $missingScreen.find("a").click(function (e) {                                                           e.stopPropagation();                                                            e.preventDefault();                                                             u.installPlugin();                                                              return false;                                                   });                                                     $missingScreen.show();                                          break;                                          case "installed":                                                       $missingScreen.remove();                                                break;                                          case "first":                                           break;                                  }                               });                             u.initPlugin(jQuery("#unityPlayer")[0], "march-game-0.unity3d");                        });</p>
+<p>// ]]&gt;&lt;/script&gt;</p>
+<p>&lt;style type="text/css"&gt;&lt;!--</p>
+<p>body {                  font-family: Helvetica, Verdana, Arial, sans-serif;                     background-color: white;                        color: black;                   text-align: center;             }               a:link, a:visited {                     color: #000;            }               a:active, a:hover {                     color: #666;            }               p.header {                      font-size: small;               }               p.header span {                         font-weight: bold;              }               p.footer {                      font-size: x-small;             }               div.content {                   margin: auto;                   width: 960px;           }               div.broken,             div.missing {                   margin: auto;                   position: relative;                     top: 50%;                       width: 193px;           }               div.broken a,           div.missing a {                         height: 63px;                   position: relative;                     top: -31px;             }               div.broken img,                 div.missing img {                       border-width: 0px;              }               div.broken {                    display: none;          }               div#unityPlayer {                       cursor: default;                        height: 600px;                  width: 960px;           }               --&gt;</p>
+<p>--&gt;&lt;/style&gt;</p>
+<p>&lt;/p&gt;&lt;p class="header"&gt;&lt;span&gt; &lt;/span&gt;&lt;/p&gt;</p>
+<p>&lt;h1 style="font-family: monospace; color: #d9af3e; font-size: 48px; text-align: center;"&gt;BroBeur Studios&lt;/h1&gt;</p>
+<p>&lt;h2 style="font-family: monospace; color: #b7a676; font-size: 24px; text-align: center;"&gt;MarchGame v0.1 Third person platformer.&lt;/h2&gt;</p>
+<p>&lt;h3 style="font-family: monospace; color: #b7a676; font-size: 24px; text-align: center;"&gt;&lt;a href="<a class="reference external" href="http://brobeur.com">http://brobeur.com</a>"&gt;home&lt;/a&gt; &lt;a href="<a class="reference external" href="http://brobeur.com/about/">http://brobeur.com/about/</a>"&gt;about&lt;/a&gt; &lt;a href="<a class="reference external" href="http://brobeur.com/sign-up/">http://brobeur.com/sign-up/</a>"&gt;sign-up&lt;/a&gt;</p>
+<p>&lt;a href="<a class="reference external" href="http://brobeur.com/random/">http://brobeur.com/random/</a>"&gt;random&lt;/a&gt;&lt;/h3&gt;</p>
+<p>&lt;p class="header"&gt;MarchGame v0.1&lt;/p&gt;</p>
+<p>&lt;p class="header"&gt;&lt;/p&gt;</p>
+<p>&lt;p class="header"&gt;&lt;a href="/wp-content/uploads/2013/04/marchGame-1.png"&gt;&lt;img class="alignnone size-medium wp-image-65" alt="marchGame-1" src="/wp-content/uploads/2013/04/marchGame-1-300x300.png" width="300" height="300"&gt;&lt;/a&gt;&lt;/p&gt;</p>
+<p>&lt;div class="content"&gt;</p>
+<p>&lt;div id="unityPlayer"&gt;</p>
+<p>&lt;div class="missing"&gt;&lt;a title="Unity Web Player. Install now!" href="<a class="reference external" href="http://unity3d.com/webplayer/">http://unity3d.com/webplayer/</a>"&gt;</p>
+<p>&lt;img alt="Unity Web Player. Install now!" src="<a class="reference external" href="http://webplayer.unity3d.com/installation/getunity.png">http://webplayer.unity3d.com/installation/getunity.png</a>" width="193" height="63"&gt;</p>
+<p>&lt;/a&gt;&lt;/div&gt;</p>
+<p>&lt;div class="broken"&gt;&lt;a title="Unity Web Player. Install now! Restart your browser after install." href="<a class="reference external" href="http://unity3d.com/webplayer/">http://unity3d.com/webplayer/</a>"&gt;</p>
+<p>&lt;img alt="Unity Web Player. Install now! Restart your browser after install." src="<a class="reference external" href="http://webplayer.unity3d.com/installation/getunityrestart.png">http://webplayer.unity3d.com/installation/getunityrestart.png</a>" width="193" height="63"&gt;</p>
+<p>&lt;/a&gt;&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;p class="footer"&gt;« created with &lt;a title="Go to unity3d.com" href="<a class="reference external" href="http://unity3d.com/unity/">http://unity3d.com/unity/</a>"&gt;Unity&lt;/a&gt; »&lt;/p&gt;</p>
+<p> &lt;/body&gt;&lt;/html&gt;</p>
+</div>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/aux-jan-game.html">Aux-Jan Game</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-03T07:52:35+00:00">2013-04-03 07:52</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <p>&lt;html&gt;&lt;body&gt;&lt;img class="alignnone size-medium wp-image-48" alt="logoaux" src="/wp-content/uploads/2013/04/logoaux-300x136.jpg" width="300" height="136"&gt; &lt;img class="alignnone size-medium wp-image-49" alt="images (13)" src="/wp-content/uploads/2013/04/images-13-300x120.jpg" width="300" height="120"&gt; &lt;img class="alignnone size-medium wp-image-50" alt="images (34)" src="/wp-content/uploads/2013/04/images-34.jpg" width="259" height="194"&gt; &lt;img class="alignnone size-medium wp-image-51" alt="images (53)" src="/wp-content/uploads/2013/04/images-53.jpg" width="259" height="194"&gt; &lt;img class="alignnone size-medium wp-image-52" alt="images (51)" src="/wp-content/uploads/2013/04/images-51.jpg" width="259" height="194"&gt; &lt;img class="alignnone size-medium wp-image-53" alt="images (50)" src="/wp-content/uploads/2013/04/images-50.jpg" width="259" height="194"&gt; &lt;img class="alignnone size-medium wp-image-54" alt="6.2" src="/wp-content/uploads/2013/04/6.2-300x225.jpg" width="300" height="225"&gt;&lt;/body&gt;&lt;/html&gt;</p>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/digital-paintings-created-with-sketchbook-and-gimp.html">Digital Paintings created with SketchBook and GIMP</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-02T21:33:18+00:00">2013-04-02 21:33</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <div>
+<p>&lt;html&gt;&lt;body&gt;&lt;img class="alignnone size-medium wp-image-23" alt="cropped-Sketch2243946.jpg" src="/wp-content/uploads/2013/04/cropped-Sketch2243946-300x191.jpg" width="729" height="464"&gt;</p>
+<p>&lt;a href="/wp-content/uploads/2013/04/cropped-Sketch22112918.png"&gt;&lt;img class="alignnone size-medium wp-image-22" alt="cropped-Sketch22112918.png" src="/wp-content/uploads/2013/04/cropped-Sketch22112918-300x166.png" width="760" height="420"&gt;&lt;/a&gt;</p>
+<p>&lt;a href="/wp-content/uploads/2013/04/mouth-BW.jpg"&gt;&lt;img class="alignnone size-medium wp-image-21" alt="mouth-BW" src="/wp-content/uploads/2013/04/mouth-BW-300x150.jpg" width="760" height="380"&gt;&lt;/a&gt;</p>
+<p>&lt;a href="/wp-content/uploads/2013/04/redddits-colbw.png"&gt;&lt;img class="alignnone size-medium wp-image-20" alt="redddits-colbw" src="/wp-content/uploads/2013/04/redddits-colbw-300x291.png" width="689" height="669"&gt;&lt;/a&gt;</p>
+<p>&lt;a href="/wp-content/uploads/2013/03/ca-water-col-Small_20130402152928517.jpg"&gt;&lt;img class="alignnone size-medium wp-image-14" alt="ca-water-col (Small)_20130402152928517" src="/wp-content/uploads/2013/03/ca-water-col-Small_20130402152928517-300x58.jpg" width="1101" height="213"&gt;&lt;/a&gt;</p>
+<p>&lt;a href="/wp-content/uploads/2013/04/Sketch2211233.jpg"&gt;&lt;img class="alignnone size-medium wp-image-12" alt="Sketch2211233" src="/wp-content/uploads/2013/04/Sketch2211233-300x191.jpg" width="1059" height="674"&gt;&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</p>
+</div>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/29.html">None</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-02T21:03:56+00:00">2013-04-02 21:03</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <div>
+<p>&lt;html&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;canvas id="myCanvas" width="512" height="48" style="border:1px solid #c3c3c3;"&gt;</p>
+<p>Your browser does not support the HTML5 canvas tag.</p>
+<p>&lt;/canvas&gt;</p>
+<p>&lt;textarea rows="1" cols="34"&gt;</p>
+<p>-&amp;gt; -&amp;gt; -&amp;gt; BroBeur Studios</p>
+<p>context.drawImage(img_elem, dx, dy);</p>
+<p>&lt;script&gt;</p>
+<p>var c=document.getElementById("myCanvas");</p>
+<p>var ctx=c.getContext("2d");</p>
+<p>ctx.fillStyle="#b3df2a";</p>
+<p>ctx.fillRect(50,5,256,40);</p>
+<p>var ctd=c.getContext("2d");</p>
+<p>ctd.fillStyle="#111111";</p>
+<p>ctd.fillRect(128,10,48,24);</p>
+<p>&lt;/script&gt;</p>
+<dl class="docutils">
+<dt>&lt;video width="512" height="512" controls&gt;</dt>
+<dd>&lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;source src="movie.ogg" type="video/ogg"&gt;</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 48)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>Your browser does not support the video tag.</p>
+<p>&lt;/source&gt;&lt;/source&gt;&lt;/video&gt;</p>
+<p>&lt;/textarea&gt;&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+</div>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/25.html">None</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-02T20:23:41+00:00">2013-04-02 20:23</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <div>
+<p>&lt;html&gt;&lt;body&gt;&lt;p&gt;</p>
+<p>&lt;/p&gt;&lt;p style="text-align: center;"&gt;</p>
+<p>&lt;canvas style="border: 1px solid #c3c3c3;" width="500" height="100"&gt; Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;</p>
+<p>&lt;/p&gt;&lt;h1 style="font-family:monospace;color:#d9af3e;font-size:48px;text-align:center"&gt;Bro Beur Studios&lt;/h1&gt;</p>
+<p>&lt;script type="text/javascript"&gt;// &lt;![CDATA[</p>
+<p>var c=document.getElementById("myCanvas");</p>
+<p>var ctx=c.getContext("2d");</p>
+<p>ctx.fillStyle="#b3df2a";</p>
+<p>ctx.fillRect(50,10,500,60);</p>
+<p>var ctd=c.getContext("2d");</p>
+<p>ctd.fillStyle="#111111";</p>
+<p>ctd.fillRect(300,0,50,100);</p>
+<p>// ]]&gt;&lt;/script&gt;</p>
+<p> &lt;/body&gt;&lt;/html&gt;</p>
+</div>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/17.html">Basic HTML5 Game</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-02T18:41:03+00:00">2013-04-02 18:41</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <div>
+<dl class="docutils">
+<dt>&lt;html&gt;&lt;head&gt;&lt;script type="text/javascript"&gt;// &lt;![CDATA[</dt>
+<dd>function draw()</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 3)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>{</p>
+<blockquote>
+<p>var rxt = document.getElementById('canvas').getContext('2d');</p>
+<p>var IMG = new Image();</p>
+<p>IMG.src = 'image/untitled.GIF';</p>
+<p>IMG.onload = function()</p>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 13)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p>{</p>
+<blockquote>
+for (i=0;i&lt;4;i++)</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 17)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p>{</p>
+<blockquote>
+for (j=0;j&lt;3;j++)</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 21)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p>{</p>
+<blockquote>
+rxt.drawImage(IMG,j*200,i*160,300,300);</blockquote>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>// ]]&gt;&lt;/script&gt;&lt;/head&gt;&lt;/html&gt;</p>
+</div>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/11.html">None</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-04-02T17:52:40+00:00">2013-04-02 17:52</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <p>&lt;html&gt;&lt;body&gt;&lt;a href="hftp://joeblac@192.168.1.3:2221/Autodesk/Pixlr%20Express/"&gt;&lt;img class="size-medium wp-image-12 aligncenter" alt="Sketch2211233" src="/wp-content/uploads/2013/04/Sketch2211233-300x191.jpg" width="300" height="191"&gt;&lt;/a&gt;x`&lt;/body&gt;&lt;/html&gt;</p>
+            
+
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/9.html">Biop sshock</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Posted: <time class="published" datetime="2013-03-31T21:46:42+00:00">2013-03-31 21:46</time>
+                </span>
+                <br>
+                <span class="tags">Tags: 
+                </span>
+            </div>
+        <p>&lt;html&gt;&lt;body&gt;&lt;p&gt;Bioshock infinite is the third game in the Bioshock series. Released in march 2013 for playstation 3, xbox360 and Pc. This review covers the pc version of the game.     this is the first game of the series that I've finished. I played the first a little - but my brother played it through and I watched. The first was certainly a classic.       I never played the 2ND so unable to comment. Perhaps I should give it a go.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</p>
+            
+
+        </div>
+    
+        <nav class="postindexpager">
+        <ul class="pager">
+            <li class="previous">
+                <a href="index-2.html" rel="prev">Newer posts</a>
+            </li>
+        </ul>
+        </nav>
+
+    
+
+	
+
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://brobuer.com/" title="brobeur">brobeur</a>
+            </h1>
+            
+            
+            <ul class="unstyled">
+            <li>
+            
+                <li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+        </div>
+        <div id="footer">
+            Contents © 2015         <a href="mailto:n.tesla@example.com">wcmckee</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="assets/js/all-nocdn.js"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    
+    
+    
+</body>
+</html>

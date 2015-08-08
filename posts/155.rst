@@ -1,0 +1,8 @@
+<html><body><p>test123<canvas style="border: 1px solid #c3c3c3;" width="128" height="32"> Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+<script type="text/javascript">// <![CDATA[
+
+var c=document.getElementById("myCanvas"); var ctx=c.getContext("2d"); ctx.fillStyle="#536188"; ctx.fillRect(0,0,128,12); var ctx=c.getContext("2d"); ctx.fillStyle="#181032"; ctx.fillRect(0,15,128,103); var ctx=c.getContext("2d"); ctx.fillStyle="#67151b"; ctx.fillRect(0,10,64,2); var ctx=c.getContext("2d"); ctx.fillStyle="#67151b"; ctx.fillRect(64,8,64,4); var ctx=c.getContext("2d"); ctx.fillStyle="#67151b"; ctx.fillRect(100,12,5,6); var ctx=c.getContext("2d"); ctx.fillStyle="#1c212e"; ctx.fillRect(0,12,128,3); var ctx=c.getContext("2d"); ctx.fillStyle="#bfa954"; ctx.fillRect(5,5,5,5); var ctx=c.getContext("2d"); ctx.fillStyle="#bfa954"; ctx.fillRect(15,3,5,5); var ctx=c.getContext("2d"); ctx.fillStyle="#c8d991"; ctx.fillRect(0,15,128,8);
+
+// ]]></script></p></body></html>

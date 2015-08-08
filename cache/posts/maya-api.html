@@ -1,0 +1,1729 @@
+<p>&lt;html&gt;&lt;body&gt;&lt;p&gt;[prettify=python]
+import maya.cmds as cmds</p>
+<p>cmd.files(f=True, new=True)</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'cmd' is not defined #</p>
+<p>cmds.files(f=True, new=True)</p>
+<p># Error: line 1: AttributeError: file &lt;maya console&gt; line 1: 'module' object has no attribute 'files' #</p>
+<p>cmds.file(f=True, new=True)</p>
+<p># Result: untitled #</p>
+<p>window = cmds.window()</p>
+<p>cmds.paneLayout()</p>
+<p># Result: window1|paneLayout3 #</p>
+<p>cmds.modelPanel()</p>
+<p># Result: modelPanel5 #</p>
+<p>cmds.showWindow(window)</p>
+<p>import numpy</p>
+<p># Error: line 1: ImportError: file &lt;maya console&gt; line 1: No module named numpy #</p>
+<p>import math</p>
+<p>help math()</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>help('math')</p>
+<p>Help on built-in module math:</p>
+<dl class="docutils">
+<dt>NAME</dt>
+<dd>math</dd>
+<dt>FILE</dt>
+<dd>(built-in)</dd>
+<dt>DESCRIPTION</dt>
+<dd>This module is always available.  It provides access to the
+mathematical functions defined by the C standard.</dd>
+<dt>FUNCTIONS</dt>
+<dd><dl class="first last docutils">
+<dt>acos(...)</dt>
+<dd><p class="first">acos(x)</p>
+<p class="last">Return the arc cosine (measured in radians) of x.</p>
+</dd>
+<dt>acosh(...)</dt>
+<dd><p class="first">acosh(x)</p>
+<p class="last">Return the hyperbolic arc cosine (measured in radians) of x.</p>
+</dd>
+<dt>asin(...)</dt>
+<dd><p class="first">asin(x)</p>
+<p class="last">Return the arc sine (measured in radians) of x.</p>
+</dd>
+<dt>asinh(...)</dt>
+<dd><p class="first">asinh(x)</p>
+<p class="last">Return the hyperbolic arc sine (measured in radians) of x.</p>
+</dd>
+<dt>atan(...)</dt>
+<dd><p class="first">atan(x)</p>
+<p class="last">Return the arc tangent (measured in radians) of x.</p>
+</dd>
+<dt>atan2(...)</dt>
+<dd><p class="first">atan2(y, x)</p>
+<p class="last">Return the arc tangent (measured in radians) of y/x.
+Unlike atan(y/x), the signs of both x and y are considered.</p>
+</dd>
+<dt>atanh(...)</dt>
+<dd><p class="first">atanh(x)</p>
+<p class="last">Return the hyperbolic arc tangent (measured in radians) of x.</p>
+</dd>
+<dt>ceil(...)</dt>
+<dd><p class="first">ceil(x)</p>
+<p class="last">Return the ceiling of x as a float.
+This is the smallest integral value &amp;gt;= x.</p>
+</dd>
+<dt>copysign(...)</dt>
+<dd><p class="first">copysign(x, y)</p>
+<p class="last">Return x with the sign of y.</p>
+</dd>
+<dt>cos(...)</dt>
+<dd><p class="first">cos(x)</p>
+<p class="last">Return the cosine of x (measured in radians).</p>
+</dd>
+<dt>cosh(...)</dt>
+<dd><p class="first">cosh(x)</p>
+<p class="last">Return the hyperbolic cosine of x.</p>
+</dd>
+<dt>degrees(...)</dt>
+<dd><p class="first">degrees(x)</p>
+<p class="last">Convert angle x from radians to degrees.</p>
+</dd>
+<dt>erf(...)</dt>
+<dd><p class="first">erf(x)</p>
+<p class="last">Error function at x.</p>
+</dd>
+<dt>erfc(...)</dt>
+<dd><p class="first">erfc(x)</p>
+<p class="last">Complementary error function at x.</p>
+</dd>
+<dt>exp(...)</dt>
+<dd><p class="first">exp(x)</p>
+<p class="last">Return e raised to the power of x.</p>
+</dd>
+<dt>expm1(...)</dt>
+<dd><p class="first">expm1(x)</p>
+<p class="last">Return exp(x)-1.
+This function avoids the loss of precision involved in the direct evaluation of exp(x)-1 for small x.</p>
+</dd>
+<dt>fabs(...)</dt>
+<dd><p class="first">fabs(x)</p>
+<p class="last">Return the absolute value of the float x.</p>
+</dd>
+<dt>factorial(...)</dt>
+<dd><p class="first">factorial(x) -&amp;gt; Integral</p>
+<p class="last">Find x!. Raise a ValueError if x is negative or non-integral.</p>
+</dd>
+<dt>floor(...)</dt>
+<dd><p class="first">floor(x)</p>
+<p>Return the floor of x as a float.
+This is the largest integral value  bool</p>
+<p class="last">Check if float x is infinite (positive or negative).</p>
+</dd>
+<dt>isnan(...)</dt>
+<dd><p class="first">isnan(x) -&amp;gt; bool</p>
+<p class="last">Check if float x is not a number (NaN).</p>
+</dd>
+<dt>ldexp(...)</dt>
+<dd><p class="first">ldexp(x, i)</p>
+<p class="last">Return x * (2**i).</p>
+</dd>
+<dt>lgamma(...)</dt>
+<dd><p class="first">lgamma(x)</p>
+<p class="last">Natural logarithm of absolute value of Gamma function at x.</p>
+</dd>
+<dt>log(...)</dt>
+<dd><p class="first">log(x[, base])</p>
+<p class="last">Return the logarithm of x to the given base.
+If the base not specified, returns the natural logarithm (base e) of x.</p>
+</dd>
+<dt>log10(...)</dt>
+<dd><p class="first">log10(x)</p>
+<p class="last">Return the base 10 logarithm of x.</p>
+</dd>
+<dt>log1p(...)</dt>
+<dd><p class="first">log1p(x)</p>
+<p class="last">Return the natural logarithm of 1+x (base e).
+The result is computed in a way which is accurate for x near zero.</p>
+</dd>
+<dt>modf(...)</dt>
+<dd><p class="first">modf(x)</p>
+<p class="last">Return the fractional and integer parts of x.  Both results carry the sign
+of x and are floats.</p>
+</dd>
+<dt>pow(...)</dt>
+<dd><p class="first">pow(x, y)</p>
+<p class="last">Return x**y (x to the power of y).</p>
+</dd>
+<dt>radians(...)</dt>
+<dd><p class="first">radians(x)</p>
+<p class="last">Convert angle x from degrees to radians.</p>
+</dd>
+<dt>sin(...)</dt>
+<dd><p class="first">sin(x)</p>
+<p class="last">Return the sine of x (measured in radians).</p>
+</dd>
+<dt>sinh(...)</dt>
+<dd><p class="first">sinh(x)</p>
+<p class="last">Return the hyperbolic sine of x.</p>
+</dd>
+<dt>sqrt(...)</dt>
+<dd><p class="first">sqrt(x)</p>
+<p class="last">Return the square root of x.</p>
+</dd>
+<dt>tan(...)</dt>
+<dd><p class="first">tan(x)</p>
+<p class="last">Return the tangent of x (measured in radians).</p>
+</dd>
+<dt>tanh(...)</dt>
+<dd><p class="first">tanh(x)</p>
+<p class="last">Return the hyperbolic tangent of x.</p>
+</dd>
+<dt>trunc(...)</dt>
+<dd><p class="first">trunc(x:Real) -&amp;gt; Integral</p>
+<p class="last">Truncates x to the nearest Integral toward 0. Uses the __trunc__ magic method.</p>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt>
+<dd>e = 2.718281828459045
+pi = 3.141592653589793</dd>
+</dl>
+<p>import random</p>
+<p>rand = random.randint(1,20)</p>
+<p>cod = math.acos(rand)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 3: math domain error #</p>
+<p>import random</p>
+<p>rand = random.randint(1,20)</p>
+<p>cod = math.acos(rand)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: math domain error #</p>
+<p>import math</p>
+<p>cod = math.acos(rand)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 2: math domain error #</p>
+<p>rand = random.randint(1,20)</p>
+<p>cod = math.acos(rand)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 2: math domain error #</p>
+<p>x = cmds.polyCube()</p>
+<p>print x</p>
+<p>[u'pCube1', u'polyCube1']</p>
+<p>x.translate(1.0,rand,0.0,0.0)</p>
+<p># Error: line 1: AttributeError: file &lt;maya console&gt; line 1: 'list' object has no attribute 'translate' #</p>
+<p>help('x')</p>
+<p>no Python documentation found for 'x'</p>
+<p>run = random.randint(1,10)</p>
+<p>cmds.polyCreateFacet( p=[(0, run, 0), (0, -2, run), (run, -2, 0), (run, 2, 0)] )</p>
+<p>cmds.polyPlane( n=’plg’, w=10, h=10 )</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>cmds.move( 0, 0, 10, r=True )</p>
+<p>cmds.move( 0, 0, -10, r=True )</p>
+<p>cmds.polyCut( ‘pCylA.f[0:59]‘, cd=’Y', ch=1 )</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>cmds.polyCut()</p>
+<p># Result: [u'polyCut1'] #</p>
+<p>x = 1</p>
+<dl class="docutils">
+<dt>if x = &amp;gt; 10:</dt>
+<dd>cmds.polyCut()
+x + 1</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 318)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>x = 1</p>
+<dl class="docutils">
+<dt>if x =&amp;gt; 10:</dt>
+<dd>cmds.polyCut()
+x + 1</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 325)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>x = 1</p>
+<dl class="docutils">
+<dt>if x =&amp;gt; 10:</dt>
+<dd>cmds.polyCut()
+x + 1</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 332)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>var1 = 100</p>
+<dl class="docutils">
+<dt>if var1:</dt>
+<dd>print('testing123')
+print var1</dd>
+<dt>else:</dt>
+<dd>print('no')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 341)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>testing123</p>
+<p>100</p>
+<dl class="docutils">
+<dt>if x = 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 348)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>if x = 20:</dt>
+<dd>print('hello')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 352)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>x + 1</p>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>if x = 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+<dt>else:</dt>
+<dd>break</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 361)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>x=1</p>
+<dl class="docutils">
+<dt>if x = 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+<dt>else:</dt>
+<dd>break</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 370)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>x=1</p>
+<dl class="docutils">
+<dt>if x &amp;gt;= 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+<dt>else:</dt>
+<dd>break</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 379)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: 'break' outside loop #</p>
+<dl class="docutils">
+<dt>if x &amp;gt;= 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+<dt>if x &amp;gt;= 20:</dt>
+<dd>print('hello')
+x + 1</dd>
+<dt>def togVis(obj):</dt>
+<dd>cmds.setAttr (obj+'.visibility',
+not cmds.getAttr(obj+'.visibility'))
+toggleVisibility('pCube1')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 393)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>print togVis</p>
+<p>&lt;function togvis at&gt;</p>
+<p>togVis</p>
+<p># Result: &lt;function togvis at&gt; #</p>
+<dl class="docutils">
+<dt>for n in range(2,10):</dt>
+<dd><dl class="first last docutils">
+<dt>for x in range(2,n):</dt>
+<dd><dl class="first last docutils">
+<dt>if n % x == 0:</dt>
+<dd>print n, 'equals', x', '*', n/x
+break</dd>
+</dl>
+</dd>
+<dt>else:</dt>
+<dd>print n, 'is a prime number'</dd>
+</dl>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 408)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>for n in range(2,10):</dt>
+<dd><dl class="first last docutils">
+<dt>for x in range(2,n):</dt>
+<dd><dl class="first last docutils">
+<dt>if n % x == 0:</dt>
+<dd>print n, 'equals', 'x', '*', n/x
+break</dd>
+</dl>
+</dd>
+<dt>else:</dt>
+<dd>print n, 'is a prime number'</dd>
+</dl>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 417)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>2 is a prime number</p>
+<p>3 is a prime number</p>
+<p>4 equals x * 2</p>
+<p>5 is a prime number</p>
+<p>6 equals x * 3</p>
+<p>7 is a prime number</p>
+<p>8 equals x * 4</p>
+<p>9 equals x * 3</p>
+<p>teste = raw_input('name')</p>
+<p>cmds.group(em=True,name=teste)</p>
+<dl class="docutils">
+<dt>namedef dolt():</dt>
+<dd><p class="first">cmds.group(em=True,name=(cmds.textField('userInput',q=True,
+tx=True)))</p>
+<p>cmds.window()</p>
+<p class="last">cmds.columnLayout(adj=True)
+cmds.textField('userinput')
+cmds.button(l='group',c='dolt()')
+cmds.showWindow</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 449)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>dolt</p>
+<p># Result: &lt;function dolt at&gt; #</p>
+<p>print dolt()</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 3: Object 'userInput' not found. #</p>
+<dl class="docutils">
+<dt>def createMaterial(name,color,type):</dt>
+<dd><p class="first">cmds.sets(renderable=True, noSurfaceShader=True,
+empty=True, name=name + 'SG')</p>
+<p>cmds.shadingNode(type, asShader=True, name=name)</p>
+<p class="last">cmds.setAttr(name+'.color',color[0],color[1],color[2],
+type='double3')
+cmds.connectAttr(name+'.outColor',
+name+'SG.surfaceShader')</p>
+</dd>
+<dt>def assignMaterial(name,object):</dt>
+<dd>cmds.sets(object,edit=True, forceElement=name+'SG')</dd>
+<dt>def createCube():</dt>
+<dd>cmds.polyCube()</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 471)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>createCube()</p>
+<p>cmds.polyBevel</p>
+<p># Result: &lt;built-in method polybevel of module object at&gt; #</p>
+<p>cmds.split()</p>
+<p># Error: line 1: AttributeError: file &lt;maya console&gt; line 1: 'module' object has no attribute 'split' #</p>
+<p>cmds.polySplit()</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Need at least one &quot;-ep&quot; or &quot;-ip&quot; flag (edge split point). #</p>
+<p>cmds.polyAppend( a=[0, (5, -5, 0)] )</p>
+<p># Warning: Can't perform polyAppend1 on selection #</p>
+<p># Result: [u'polyAppend1'] #</p>
+<p>cmds.polyAppend( a=[0, (5, 5, 0)] )</p>
+<p># Warning: Can't perform polyAppend2 on selection #</p>
+<p># Result: [u'polyAppend2'] #</p>
+<p>cmds.scale( 2, 2, 2 )</p>
+<p>s = lambda x,y: x-y</p>
+<p>print s</p>
+<p>&lt;function&gt; at 0x0000000034B175F8&amp;gt;</p>
+<p>print s(ran,10)</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'ran' is not defined #</p>
+<p>print s(22,10)</p>
+<p>12</p>
+<p>cmds.polyPlane( sx=3, sy=3 )</p>
+<p># Result: [u'pPlane1', u'polyPlane1'] #</p>
+<p>ranx = random.randint(3,6)</p>
+<p>cmds.polyPlane( sx=ranx, sy=3 )</p>
+<p>cmds.polyExtrudeFacet()</p>
+<p># Result: [u'polyExtrudeFace1'] #</p>
+<p>cmds.polyExtrudeFacet()</p>
+<p>cmds.move(0,4,0)</p>
+<dl class="docutils">
+<dt>def extrudenow:</dt>
+<dd>cmds.poyExtrudeFacet()
+cmds.move(0,2,0)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 536)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>def extrudenow:</dt>
+<dd>cmds.poyExtrudeFacet()
+cmds.move(0,2,0)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 541)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>def extrudenow:</dt>
+<dd>cmds.polyExtrudeFacet()
+cmds.move(0,2,0)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 546)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>def extrudenow():</dt>
+<dd>cmds.polyExtrudeFacet()
+cmds.move(0,2,0)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 551)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>extrudeNow()</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'extrudeNow' is not defined #</p>
+<p>extrudenow()</p>
+<p>cmds..translate(1.0,2.5,0.0,0.0)</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>cmds.translate(1.0,2.5,0.0,0.0)</p>
+<p># Error: line 1: AttributeError: file &lt;maya console&gt; line 1: 'module' object has no attribute 'translate' #</p>
+<p>import json</p>
+<p>help('json')</p>
+<p>Help on package json:</p>
+<dl class="docutils">
+<dt>NAME</dt>
+<dd>json</dd>
+<dt>FILE</dt>
+<dd>c:python27libjson__init__.py</dd>
+<dt>DESCRIPTION</dt>
+<dd><p class="first">JSON (JavaScript Object Notation) &lt;http:&gt; is a subset of
+JavaScript syntax (ECMA-262 3rd edition) used as a lightweight data
+interchange format.</p>
+<p><a href="#id1"><span class="problematic" id="id2">:mod:`json`</span></a> exposes an API familiar to users of the standard library
+<a href="#id3"><span class="problematic" id="id4">:mod:`marshal`</span></a> and <a href="#id5"><span class="problematic" id="id6">:mod:`pickle`</span></a> modules. It is the externally maintained
+version of the <a href="#id7"><span class="problematic" id="id8">:mod:`json`</span></a> library contained in Python 2.6, but maintains
+compatibility with Python 2.4 and Python 2.5 and (currently) has
+significant performance advantages, even without using the optional C
+extension for speedups.</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 586); <em><a href="#id2">backlink</a></em></p>
+Unknown interpreted text role &quot;mod&quot;.</div>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 586); <em><a href="#id4">backlink</a></em></p>
+Unknown interpreted text role &quot;mod&quot;.</div>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 586); <em><a href="#id6">backlink</a></em></p>
+Unknown interpreted text role &quot;mod&quot;.</div>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 586); <em><a href="#id8">backlink</a></em></p>
+Unknown interpreted text role &quot;mod&quot;.</div>
+<p>Encoding basic Python object hierarchies:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+'[&quot;foo&quot;, {&quot;bar&quot;: [&quot;baz&quot;, null, 1.0, 2]}]'
+&amp;gt;&amp;gt;&amp;gt; print json.dumps(&quot;\&quot;foo\bar&quot;)
+&quot;\&quot;foo\bar&quot;
+&amp;gt;&amp;gt;&amp;gt; print json.dumps(u'\u1234')
+&quot;\u1234&quot;
+&amp;gt;&amp;gt;&amp;gt; print json.dumps('\\')
+&quot;\\&quot;
+&amp;gt;&amp;gt;&amp;gt; print json.dumps({&quot;c&quot;: 0, &quot;b&quot;: 0, &quot;a&quot;: 0}, sort_keys=True)
+{&quot;a&quot;: 0, &quot;b&quot;: 0, &quot;c&quot;: 0}
+&amp;gt;&amp;gt;&amp;gt; from StringIO import StringIO
+&amp;gt;&amp;gt;&amp;gt; io = StringIO()
+&amp;gt;&amp;gt;&amp;gt; json.dump(['streaming API'], io)
+&amp;gt;&amp;gt;&amp;gt; io.getvalue()
+'[&quot;streaming API&quot;]'
+</pre>
+<p>Compact encoding:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; json.dumps([1,2,3,{'4': 5, '6': 7}], separators=(',',':'))
+'[1,2,3,{&quot;4&quot;:5,&quot;6&quot;:7}]'
+</pre>
+<p>Pretty printing:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; s = json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)
+&amp;gt;&amp;gt;&amp;gt; print '\n'.join([l.rstrip() for l in  s.splitlines()])
+{
+    &quot;4&quot;: 5,
+    &quot;6&quot;: 7
+}
+</pre>
+<p>Decoding JSON:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; obj = [u'foo', {u'bar': [u'baz', None, 1.0, 2]}]
+&amp;gt;&amp;gt;&amp;gt; json.loads('[&quot;foo&quot;, {&quot;bar&quot;:[&quot;baz&quot;, null, 1.0, 2]}]') == obj
+True
+&amp;gt;&amp;gt;&amp;gt; json.loads('&quot;\\&quot;foo\\bar&quot;') == u'&quot;foo\x08ar'
+True
+&amp;gt;&amp;gt;&amp;gt; from StringIO import StringIO
+&amp;gt;&amp;gt;&amp;gt; io = StringIO('[&quot;streaming API&quot;]')
+&amp;gt;&amp;gt;&amp;gt; json.load(io)[0] == 'streaming API'
+True
+</pre>
+<p>Specializing JSON object decoding:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; def as_complex(dct):
+...     if '__complex__' in dct:
+...         return complex(dct['real'], dct['imag'])
+...     return dct
+...
+&amp;gt;&amp;gt;&amp;gt; json.loads('{&quot;__complex__&quot;: true, &quot;real&quot;: 1, &quot;imag&quot;: 2}',
+...     object_hook=as_complex)
+(1+2j)
+&amp;gt;&amp;gt;&amp;gt; from decimal import Decimal
+&amp;gt;&amp;gt;&amp;gt; json.loads('1.1', parse_float=Decimal) == Decimal('1.1')
+True
+</pre>
+<p>Specializing JSON object encoding:</p>
+<pre class="literal-block">
+&amp;gt;&amp;gt;&amp;gt; import json
+&amp;gt;&amp;gt;&amp;gt; def encode_complex(obj):
+...     if isinstance(obj, complex):
+...         return [obj.real, obj.imag]
+...     raise TypeError(repr(o) + &quot; is not JSON serializable&quot;)
+...
+&amp;gt;&amp;gt;&amp;gt; json.dumps(2 + 1j, default=encode_complex)
+'[2.0, 1.0]'
+&amp;gt;&amp;gt;&amp;gt; json.JSONEncoder(default=encode_complex).encode(2 + 1j)
+'[2.0, 1.0]'
+&amp;gt;&amp;gt;&amp;gt; ''.join(json.JSONEncoder(default=encode_complex).iterencode(2 + 1j))
+'[2.0, 1.0]'
+</pre>
+<p>Using json.tool from the shell to validate and pretty-print:</p>
+<pre class="last literal-block">
+$ echo '{&quot;json&quot;:&quot;obj&quot;}' | python -m json.tool
+{
+    &quot;json&quot;: &quot;obj&quot;
+}
+$ echo '{ 1.2:3.4}' | python -m json.tool
+Expecting property name: line 1 column 2 (char 2)
+</pre>
+</dd>
+<dt>PACKAGE CONTENTS</dt>
+<dd>decoder
+encoder
+scanner
+tests (package)
+tool</dd>
+<dt>CLASSES</dt>
+<dd><dl class="first last docutils">
+<dt>__builtin__.object</dt>
+<dd>json.decoder.JSONDecoder
+json.encoder.JSONEncoder</dd>
+<dt>class JSONDecoder(__builtin__.object)</dt>
+<dd><div class="first last line-block">
+<div class="line">Simple JSON &lt;http:&gt; decoder</div>
+<div class="line"><br /></div>
+<div class="line">Performs the following translations in decoding by default:</div>
+<div class="line"><br /></div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| JSON          | Python            |</div>
+<div class="line">+===============+===================+</div>
+<div class="line">| object        | dict              |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| array         | list              |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| string        | unicode           |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| number (int)  | int, long         |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| number (real) | float             |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| true          | True              |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| false         | False             |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line">| null          | None              |</div>
+<div class="line">+---------------+-------------------+</div>
+<div class="line"><br /></div>
+<div class="line">It also understands <tt class="docutils literal">NaN</tt>, <tt class="docutils literal">Infinity</tt>, and <tt class="docutils literal"><span class="pre">-Infinity</span></tt> as</div>
+<div class="line">their corresponding <tt class="docutils literal">float</tt> values, which is outside the JSON spec.</div>
+<div class="line"><br /></div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, encoding=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, strict=True, object_pairs_hook=None)</div>
+<div class="line-block">
+<div class="line"><tt class="docutils literal">encoding</tt> determines the encoding used to interpret any <tt class="docutils literal">str</tt></div>
+<div class="line">objects decoded by this instance (utf-8 by default).  It has no</div>
+<div class="line">effect when decoding <tt class="docutils literal">unicode</tt> objects.</div>
+<div class="line"><br /></div>
+<div class="line">Note that currently only encodings that are a superset of ASCII work,</div>
+<div class="line">strings of other encodings should be passed in as <tt class="docutils literal">unicode</tt>.</div>
+<div class="line"><br /></div>
+<div class="line"><tt class="docutils literal">object_hook</tt>, if specified, will be called with the result</div>
+<div class="line">of every JSON object decoded and its return value will be used in</div>
+<div class="line">place of the given <tt class="docutils literal">dict</tt>.  This can be used to provide custom</div>
+<div class="line">deserializations (e.g. to support JSON-RPC class hinting).</div>
+<div class="line"><br /></div>
+<div class="line"><tt class="docutils literal">object_pairs_hook</tt>, if specified will be called with the result of</div>
+<div class="line">every JSON object decoded with an ordered list of pairs.  The return</div>
+<div class="line">value of <tt class="docutils literal">object_pairs_hook</tt> will be used instead of the <tt class="docutils literal">dict</tt>.</div>
+<div class="line">This feature can be used to implement custom decoders that rely on the</div>
+<div class="line">order that the key and value pairs are decoded (for example,</div>
+<div class="line">collections.OrderedDict will remember the order of insertion). If</div>
+<div class="line"><tt class="docutils literal">object_hook</tt> is also defined, the <tt class="docutils literal">object_pairs_hook</tt> takes</div>
+<div class="line">priority.</div>
+<div class="line"><br /></div>
+<div class="line"><tt class="docutils literal">parse_float</tt>, if specified, will be called with the string</div>
+<div class="line">of every JSON float to be decoded. By default this is equivalent to</div>
+<div class="line">float(num_str). This can be used to use another datatype or parser</div>
+<div class="line">for JSON floats (e.g. decimal.Decimal).</div>
+<div class="line"><br /></div>
+<div class="line"><tt class="docutils literal">parse_int</tt>, if specified, will be called with the string</div>
+<div class="line">of every JSON int to be decoded. By default this is equivalent to</div>
+<div class="line">int(num_str). This can be used to use another datatype or parser</div>
+<div class="line">for JSON integers (e.g. float).</div>
+<div class="line"><br /></div>
+<div class="line"><tt class="docutils literal">parse_constant</tt>, if specified, will be called with one of the</div>
+<div class="line">following strings: -Infinity, Infinity, NaN.</div>
+<div class="line">This can be used to raise an exception if invalid JSON numbers</div>
+<div class="line">are encountered.</div>
+<div class="line"><br /></div>
+<div class="line">If <tt class="docutils literal">strict</tt> is false (true is the default), then control</div>
+<div class="line">characters will be allowed inside strings.  Control characters in</div>
+<div class="line">this context are those with character codes in the 0-31 range,</div>
+<div class="line">including <tt class="docutils literal">'\t'</tt> (tab), <tt class="docutils literal">'\n'</tt>, <tt class="docutils literal">'\r'</tt> and <tt class="docutils literal">'\0'</tt>.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">decode(self, s, _w=&lt;built-in method match of _sre.sre_pattern object&gt;)</div>
+<div class="line-block">
+<div class="line">Return the Python representation of <tt class="docutils literal">s</tt> (a <tt class="docutils literal">str</tt> or <tt class="docutils literal">unicode</tt></div>
+<div class="line">instance containing a JSON document)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">raw_decode(self, s, idx=0)</div>
+<div class="line-block">
+<div class="line">Decode a JSON document from <tt class="docutils literal">s</tt> (a <tt class="docutils literal">str</tt> or <tt class="docutils literal">unicode</tt></div>
+<div class="line">beginning with a JSON document) and return a 2-tuple of the Python</div>
+<div class="line">representation and the index in <tt class="docutils literal">s</tt> where the document ended.</div>
+<div class="line"><br /></div>
+<div class="line">This can be used to decode a JSON document from a string that may</div>
+<div class="line">have extraneous data at the end.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+</div>
+</div>
+</dd>
+<dt>class JSONEncoder(__builtin__.object)</dt>
+<dd><div class="first last line-block">
+<div class="line">Extensible JSON &lt;http:&gt; encoder for Python data structures.</div>
+<div class="line"><br /></div>
+<div class="line">Supports the following objects and types by default:</div>
+<div class="line"><br /></div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| Python            | JSON          |</div>
+<div class="line">+===================+===============+</div>
+<div class="line">| dict              | object        |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| list, tuple       | array         |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| str, unicode      | string        |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| int, long, float  | number        |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| True              | true          |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| False             | false         |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line">| None              | null          |</div>
+<div class="line">+-------------------+---------------+</div>
+<div class="line"><br /></div>
+<div class="line">To extend this to recognize other objects, subclass and implement a</div>
+<div class="line"><tt class="docutils literal">.default()</tt> method with another method that returns a serializable</div>
+<div class="line">object for <tt class="docutils literal">o</tt> if possible, otherwise it should call the superclass</div>
+<div class="line">implementation (to raise <tt class="docutils literal">TypeError</tt>).</div>
+<div class="line"><br /></div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, encoding='utf-8', default=None)</div>
+<div class="line-block">
+<div class="line">Constructor for JSONEncoder, with sensible defaults.</div>
+<div class="line"><br /></div>
+<div class="line">If skipkeys is false, then it is a TypeError to attempt</div>
+<div class="line">encoding of keys that are not str, int, long, float or None.  If</div>
+<div class="line">skipkeys is True, such items are simply skipped.</div>
+<div class="line"><br /></div>
+<div class="line">If ensure_ascii is true, the output is guaranteed to be str</div>
+<div class="line">objects with all incoming unicode characters escaped.  If</div>
+<div class="line">ensure_ascii is false, the output will be unicode object.</div>
+<div class="line"><br /></div>
+<div class="line">If check_circular is true, then lists, dicts, and custom encoded</div>
+<div class="line">objects will be checked for circular references during encoding to</div>
+<div class="line">prevent an infinite recursion (which would cause an OverflowError).</div>
+<div class="line">Otherwise, no such check takes place.</div>
+<div class="line"><br /></div>
+<div class="line">If allow_nan is true, then NaN, Infinity, and -Infinity will be</div>
+<div class="line">encoded as such.  This behavior is not JSON specification compliant,</div>
+<div class="line">but is consistent with most JavaScript based encoders and decoders.</div>
+<div class="line">Otherwise, it will be a ValueError to encode such floats.</div>
+<div class="line"><br /></div>
+<div class="line">If sort_keys is true, then the output of dictionaries will be</div>
+<div class="line">sorted by key; this is useful for regression tests to ensure</div>
+<div class="line">that JSON serializations can be compared on a day-to-day basis.</div>
+<div class="line"><br /></div>
+<div class="line">If indent is a non-negative integer, then JSON array</div>
+<div class="line">elements and object members will be pretty-printed with that</div>
+<div class="line">indent level.  An indent level of 0 will only insert newlines.</div>
+<div class="line">None is the most compact representation.</div>
+<div class="line"><br /></div>
+<div class="line">If specified, separators should be a (item_separator, key_separator)</div>
+<div class="line">tuple.  The default is (', ', ': ').  To get the most compact JSON</div>
+<div class="line">representation you should specify (',', ':') to eliminate whitespace.</div>
+<div class="line"><br /></div>
+<div class="line">If specified, default is a function that gets called for objects</div>
+<div class="line">that can't otherwise be serialized.  It should return a JSON encodable</div>
+<div class="line">version of the object or raise a <tt class="docutils literal">TypeError</tt>.</div>
+<div class="line"><br /></div>
+<div class="line">If encoding is not None, then all input strings will be</div>
+<div class="line">transformed into unicode using that encoding prior to JSON-encoding.</div>
+<div class="line">The default is UTF-8.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">default(self, o)</div>
+<div class="line-block">
+<div class="line">Implement this method in a subclass such that it returns</div>
+<div class="line">a serializable object for <tt class="docutils literal">o</tt>, or calls the base implementation</div>
+<div class="line">(to raise a <tt class="docutils literal">TypeError</tt>).</div>
+<div class="line"><br /></div>
+<div class="line">For example, to support arbitrary iterators, you could</div>
+<div class="line">implement default like this::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">def default(self, o):</div>
+<div class="line-block">
+<div class="line">try:</div>
+<div class="line-block">
+<div class="line">iterable = iter(o)</div>
+</div>
+<div class="line">except TypeError:</div>
+<div class="line-block">
+<div class="line">pass</div>
+</div>
+<div class="line">else:</div>
+<div class="line-block">
+<div class="line">return list(iterable)</div>
+</div>
+<div class="line">return JSONEncoder.default(self, o)</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">encode(self, o)</div>
+<div class="line-block">
+<div class="line">Return a JSON string representation of a Python data structure.</div>
+<div class="line"><br /></div>
+<div class="line">&amp;gt;&amp;gt;&amp;gt; JSONEncoder().encode({&quot;foo&quot;: [&quot;bar&quot;, &quot;baz&quot;]})</div>
+<div class="line">'{&quot;foo&quot;: [&quot;bar&quot;, &quot;baz&quot;]}'</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">iterencode(self, o, _one_shot=False)</div>
+<div class="line-block">
+<div class="line">Encode the given object and yield each string</div>
+<div class="line">representation as available.</div>
+<div class="line"><br /></div>
+<div class="line">For example::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">for chunk in JSONEncoder().iterencode(bigobject):</div>
+<div class="line-block">
+<div class="line">mysocket.write(chunk)</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data and other attributes defined here:</div>
+<div class="line"><br /></div>
+<div class="line">item_separator = ', '</div>
+<div class="line"><br /></div>
+<div class="line">key_separator = ': '</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>FUNCTIONS</dt>
+<dd><dl class="first last docutils">
+<dt>dump(obj, fp, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, encoding='utf-8', default=None, <a href="#id9"><span class="problematic" id="id10">**</span></a>kw)</dt>
+<dd><div class="first system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 949); <em><a href="#id10">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p>Serialize <tt class="docutils literal">obj</tt> as a JSON formatted stream to <tt class="docutils literal">fp</tt> (a
+<tt class="docutils literal">.write()</tt>-supporting file-like object).</p>
+<p>If <tt class="docutils literal">skipkeys</tt> is true then <tt class="docutils literal">dict</tt> keys that are not basic types
+(<tt class="docutils literal">str</tt>, <tt class="docutils literal">unicode</tt>, <tt class="docutils literal">int</tt>, <tt class="docutils literal">long</tt>, <tt class="docutils literal">float</tt>, <tt class="docutils literal">bool</tt>, <tt class="docutils literal">None</tt>)
+will be skipped instead of raising a <tt class="docutils literal">TypeError</tt>.</p>
+<p>If <tt class="docutils literal">ensure_ascii</tt> is false, then the some chunks written to <tt class="docutils literal">fp</tt>
+may be <tt class="docutils literal">unicode</tt> instances, subject to normal Python <tt class="docutils literal">str</tt> to
+<tt class="docutils literal">unicode</tt> coercion rules. Unless <tt class="docutils literal">fp.write()</tt> explicitly
+understands <tt class="docutils literal">unicode</tt> (as in <tt class="docutils literal">codecs.getwriter()</tt>) this is likely
+to cause an error.</p>
+<p>If <tt class="docutils literal">check_circular</tt> is false, then the circular reference check
+for container types will be skipped and a circular reference will
+result in an <tt class="docutils literal">OverflowError</tt> (or worse).</p>
+<p>If <tt class="docutils literal">allow_nan</tt> is false, then it will be a <tt class="docutils literal">ValueError</tt> to
+serialize out of range <tt class="docutils literal">float</tt> values (<tt class="docutils literal">nan</tt>, <tt class="docutils literal">inf</tt>, <tt class="docutils literal"><span class="pre">-inf</span></tt>)
+in strict compliance of the JSON specification, instead of using the
+JavaScript equivalents (<tt class="docutils literal">NaN</tt>, <tt class="docutils literal">Infinity</tt>, <tt class="docutils literal"><span class="pre">-Infinity</span></tt>).</p>
+<p>If <tt class="docutils literal">indent</tt> is a non-negative integer, then JSON array elements and
+object members will be pretty-printed with that indent level. An indent
+level of 0 will only insert newlines. <tt class="docutils literal">None</tt> is the most compact
+representation.</p>
+<p>If <tt class="docutils literal">separators</tt> is an <tt class="docutils literal">(item_separator, dict_separator)</tt> tuple
+then it will be used instead of the default <tt class="docutils literal">(', ', ': ')</tt> separators.
+<tt class="docutils literal"><span class="pre">(',',</span> <span class="pre">':')</span></tt> is the most compact JSON representation.</p>
+<p><tt class="docutils literal">encoding</tt> is the character encoding for str instances, default is UTF-8.</p>
+<p><tt class="docutils literal">default(obj)</tt> is a function that should return a serializable version
+of obj or raise TypeError. The default simply raises TypeError.</p>
+<p class="last">To use a custom <tt class="docutils literal">JSONEncoder</tt> subclass (e.g. one that overrides the
+<tt class="docutils literal">.default()</tt> method to serialize additional types), specify it with
+the <tt class="docutils literal">cls</tt> kwarg; otherwise <tt class="docutils literal">JSONEncoder</tt> is used.</p>
+</dd>
+<dt>dumps(obj, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, encoding='utf-8', default=None, <a href="#id11"><span class="problematic" id="id12">**</span></a>kw)</dt>
+<dd><div class="first system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 987); <em><a href="#id12">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p>Serialize <tt class="docutils literal">obj</tt> to a JSON formatted <tt class="docutils literal">str</tt>.</p>
+<p>If <tt class="docutils literal">skipkeys</tt> is false then <tt class="docutils literal">dict</tt> keys that are not basic types
+(<tt class="docutils literal">str</tt>, <tt class="docutils literal">unicode</tt>, <tt class="docutils literal">int</tt>, <tt class="docutils literal">long</tt>, <tt class="docutils literal">float</tt>, <tt class="docutils literal">bool</tt>, <tt class="docutils literal">None</tt>)
+will be skipped instead of raising a <tt class="docutils literal">TypeError</tt>.</p>
+<p>If <tt class="docutils literal">ensure_ascii</tt> is false, then the return value will be a
+<tt class="docutils literal">unicode</tt> instance subject to normal Python <tt class="docutils literal">str</tt> to <tt class="docutils literal">unicode</tt>
+coercion rules instead of being escaped to an ASCII <tt class="docutils literal">str</tt>.</p>
+<p>If <tt class="docutils literal">check_circular</tt> is false, then the circular reference check
+for container types will be skipped and a circular reference will
+result in an <tt class="docutils literal">OverflowError</tt> (or worse).</p>
+<p>If <tt class="docutils literal">allow_nan</tt> is false, then it will be a <tt class="docutils literal">ValueError</tt> to
+serialize out of range <tt class="docutils literal">float</tt> values (<tt class="docutils literal">nan</tt>, <tt class="docutils literal">inf</tt>, <tt class="docutils literal"><span class="pre">-inf</span></tt>) in
+strict compliance of the JSON specification, instead of using the
+JavaScript equivalents (<tt class="docutils literal">NaN</tt>, <tt class="docutils literal">Infinity</tt>, <tt class="docutils literal"><span class="pre">-Infinity</span></tt>).</p>
+<p>If <tt class="docutils literal">indent</tt> is a non-negative integer, then JSON array elements and
+object members will be pretty-printed with that indent level. An indent
+level of 0 will only insert newlines. <tt class="docutils literal">None</tt> is the most compact
+representation.</p>
+<p>If <tt class="docutils literal">separators</tt> is an <tt class="docutils literal">(item_separator, dict_separator)</tt> tuple
+then it will be used instead of the default <tt class="docutils literal">(', ', ': ')</tt> separators.
+<tt class="docutils literal"><span class="pre">(',',</span> <span class="pre">':')</span></tt> is the most compact JSON representation.</p>
+<p><tt class="docutils literal">encoding</tt> is the character encoding for str instances, default is UTF-8.</p>
+<p><tt class="docutils literal">default(obj)</tt> is a function that should return a serializable version
+of obj or raise TypeError. The default simply raises TypeError.</p>
+<p class="last">To use a custom <tt class="docutils literal">JSONEncoder</tt> subclass (e.g. one that overrides the
+<tt class="docutils literal">.default()</tt> method to serialize additional types), specify it with
+the <tt class="docutils literal">cls</tt> kwarg; otherwise <tt class="docutils literal">JSONEncoder</tt> is used.</p>
+</dd>
+<dt>load(fp, encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, <a href="#id13"><span class="problematic" id="id14">**</span></a>kw)</dt>
+<dd><div class="first system-message" id="id13">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1014); <em><a href="#id14">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p>Deserialize <tt class="docutils literal">fp</tt> (a <tt class="docutils literal">.read()</tt>-supporting file-like object containing
+a JSON document) to a Python object.</p>
+<p>If the contents of <tt class="docutils literal">fp</tt> is encoded with an ASCII based encoding other
+than utf-8 (e.g. latin-1), then an appropriate <tt class="docutils literal">encoding</tt> name must
+be specified. Encodings that are not ASCII based (such as UCS-2) are
+not allowed, and should be wrapped with
+<tt class="docutils literal"><span class="pre">codecs.getreader(fp)(encoding)</span></tt>, or simply decoded to a <tt class="docutils literal">unicode</tt>
+object and passed to <tt class="docutils literal">loads()</tt></p>
+<p><tt class="docutils literal">object_hook</tt> is an optional function that will be called with the
+result of any object literal decode (a <tt class="docutils literal">dict</tt>). The return value of
+<tt class="docutils literal">object_hook</tt> will be used instead of the <tt class="docutils literal">dict</tt>. This feature
+can be used to implement custom decoders (e.g. JSON-RPC class hinting).</p>
+<p><tt class="docutils literal">object_pairs_hook</tt> is an optional function that will be called with the
+result of any object literal decoded with an ordered list of pairs.  The
+return value of <tt class="docutils literal">object_pairs_hook</tt> will be used instead of the <tt class="docutils literal">dict</tt>.
+This feature can be used to implement custom decoders that rely on the
+order that the key and value pairs are decoded (for example,
+collections.OrderedDict will remember the order of insertion). If
+<tt class="docutils literal">object_hook</tt> is also defined, the <tt class="docutils literal">object_pairs_hook</tt> takes priority.</p>
+<p class="last">To use a custom <tt class="docutils literal">JSONDecoder</tt> subclass, specify it with the <tt class="docutils literal">cls</tt>
+kwarg; otherwise <tt class="docutils literal">JSONDecoder</tt> is used.</p>
+</dd>
+<dt>loads(s, encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, <a href="#id15"><span class="problematic" id="id16">**</span></a>kw)</dt>
+<dd><div class="first system-message" id="id15">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1055); <em><a href="#id16">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p>Deserialize <tt class="docutils literal">s</tt> (a <tt class="docutils literal">str</tt> or <tt class="docutils literal">unicode</tt> instance containing a JSON
+document) to a Python object.</p>
+<p>If <tt class="docutils literal">s</tt> is a <tt class="docutils literal">str</tt> instance and is encoded with an ASCII based encoding
+other than utf-8 (e.g. latin-1) then an appropriate <tt class="docutils literal">encoding</tt> name
+must be specified. Encodings that are not ASCII based (such as UCS-2)
+are not allowed and should be decoded to <tt class="docutils literal">unicode</tt> first.</p>
+<p><tt class="docutils literal">object_hook</tt> is an optional function that will be called with the
+result of any object literal decode (a <tt class="docutils literal">dict</tt>). The return value of
+<tt class="docutils literal">object_hook</tt> will be used instead of the <tt class="docutils literal">dict</tt>. This feature
+can be used to implement custom decoders (e.g. JSON-RPC class hinting).</p>
+<p><tt class="docutils literal">object_pairs_hook</tt> is an optional function that will be called with the
+result of any object literal decoded with an ordered list of pairs.  The
+return value of <tt class="docutils literal">object_pairs_hook</tt> will be used instead of the <tt class="docutils literal">dict</tt>.
+This feature can be used to implement custom decoders that rely on the
+order that the key and value pairs are decoded (for example,
+collections.OrderedDict will remember the order of insertion). If
+<tt class="docutils literal">object_hook</tt> is also defined, the <tt class="docutils literal">object_pairs_hook</tt> takes priority.</p>
+<p><tt class="docutils literal">parse_float</tt>, if specified, will be called with the string
+of every JSON float to be decoded. By default this is equivalent to
+float(num_str). This can be used to use another datatype or parser
+for JSON floats (e.g. decimal.Decimal).</p>
+<p><tt class="docutils literal">parse_int</tt>, if specified, will be called with the string
+of every JSON int to be decoded. By default this is equivalent to
+int(num_str). This can be used to use another datatype or parser
+for JSON integers (e.g. float).</p>
+<p><tt class="docutils literal">parse_constant</tt>, if specified, will be called with one of the
+following strings: -Infinity, Infinity, NaN, null, true, false.
+This can be used to raise an exception if invalid JSON numbers
+are encountered.</p>
+<p class="last">To use a custom <tt class="docutils literal">JSONDecoder</tt> subclass, specify it with the <tt class="docutils literal">cls</tt>
+kwarg; otherwise <tt class="docutils literal">JSONDecoder</tt> is used.</p>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt>
+<dd>__all__ = ['dump', 'dumps', 'load', 'loads', 'JSONDecoder', 'JSONEncod...
+__author__ = 'Bob Ippolito &lt;bob&gt;'
+__version__ = '2.0.9'</dd>
+<dt>VERSION</dt>
+<dd>2.0.9</dd>
+<dt>AUTHOR</dt>
+<dd>Bob Ippolito &lt;bob&gt;</dd>
+</dl>
+<p>import requests</p>
+<p># Error: line 1: ImportError: file &lt;maya console&gt; line 1: No module named requests #</p>
+<p>import urllib2</p>
+<p># Error: line 1: ImportError: file C:Python27Libsocket.py line 47: DLL load failed: %1 is not a valid Win32 application. #</p>
+<p>import urllib</p>
+<p># Error: line 1: ImportError: file C:Python27Libsocket.py line 47: DLL load failed: %1 is not a valid Win32 application. #</p>
+<p>cmds.polyCreateFacet( p=[(0, 0, 0), (10, 0, 0), (10, 10, 0), (0, 10, 0)] )</p>
+<p># Result: [u'polySurface2', u'polyCreateFace2'] #</p>
+<p>cmds.polySplit(3,3,3)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: No object matches name: 3 #</p>
+<p>cmds.polySplit()</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Need at least one &quot;-ep&quot; or &quot;-ip&quot; flag (edge split point). #</p>
+<p>cmds.polySplit()</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Need at least one &quot;-ep&quot; or &quot;-ip&quot; flag (edge split point). #</p>
+<p>cmds.polyCreateFacet( p=[(0, 2, 0), (0, -2, 0), (4, -2, 0), (4, 2, 0)] )</p>
+<p>cmds.polySplit( ip=[(2, 0.1), (3, 0.5), (0, 2, -1, 0.0), (0, 0.9)] )</p>
+<p>lisx = []</p>
+<dl class="docutils">
+<dt>for i in range (10):</dt>
+<dd>lisx.append(random.randrange(1,101,1))
+print lisx</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1112)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>[21]</p>
+<p>[21, 84]</p>
+<p>[21, 84, 11]</p>
+<p>[21, 84, 11, 99]</p>
+<p>[21, 84, 11, 99, 7]</p>
+<p>[21, 84, 11, 99, 7, 31]</p>
+<p>[21, 84, 11, 99, 7, 31, 59]</p>
+<p>[21, 84, 11, 99, 7, 31, 59, 5]</p>
+<p>[21, 84, 11, 99, 7, 31, 59, 5, 22]</p>
+<p>[21, 84, 11, 99, 7, 31, 59, 5, 22, 79]</p>
+<p>lisx = []</p>
+<dl class="docutils">
+<dt>for i in range (10):</dt>
+<dd>lisx.append(random.randrange(1,101,1))</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1136)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>print lisx</p>
+<p>[80, 85, 86, 89, 45, 60, 55, 39, 54, 96]</p>
+<p>shuLisx = random.shuffle(lisx)</p>
+<p>print shuLisx</p>
+<p>None</p>
+<p>print lisx</p>
+<p>[54, 89, 55, 85, 39, 80, 60, 86, 45, 96]</p>
+<p>random.shuffle(lisx)</p>
+<p>print random.shuffle(lisx)</p>
+<p>None</p>
+<p>lisx = []</p>
+<dl class="docutils">
+<dt>for i in range (10):</dt>
+<dd>lisx.append(random.randrange(1,101,1))
+random.shuffle(lisx)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1161)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>print lisx</p>
+<p>[9, 5, 45, 52, 9, 21, 8, 43, 32, 93]</p>
+<p>cmds.polyCube(5,5,5)</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: No object matches name: 5 #</p>
+<p>cmds.polyCube()</p>
+<p># Result: [u'pCube3', u'polyCube3'] #</p>
+<p>help('cmds')</p>
+<p>no Python documentation found for 'cmds'</p>
+<p>import pip</p>
+<p># Error: line 1: ImportError: file &lt;maya console&gt; line 1: No module named pip #</p>
+<p>python</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'python' is not defined #</p>
+<p>import sys</p>
+<p>import maya.OpenMaya as OpenMaya</p>
+<p>import maya.OpenMayaPx as OpenMayaPx</p>
+<p># Error: line 1: ImportError: file &lt;maya console&gt; line 2: No module named OpenMayaPx #</p>
+<p>import maya.OpenMaya as OpenMaya</p>
+<p>import maya.OpenMayaMPx as OpenMayaMPx</p>
+<p>kPluginCmdName = &quot;spHelloWorld&quot;</p>
+<dl class="docutils">
+<dt>class scriptedCommand(OpenMayaMPx.MPxCommand):</dt>
+<dd><dl class="first docutils">
+<dt>def __init__(self):</dt>
+<dd>OpenMayaMPx.MPxCommand.__init__(self)</dd>
+</dl>
+<p># Invoked when the command is run.
+def doIt(self,argList):</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 1213)</p>
+Unexpected indentation.</div>
+<blockquote class="last">
+print &quot;Hello World!&quot;</blockquote>
+</dd>
+</dl>
+<p># Creator</p>
+<dl class="docutils">
+<dt>def cmdCreator():</dt>
+<dd>return OpenMayaMPx.asMPxPtr( scriptedCommand() )</dd>
+</dl>
+<p># Initialize the script plug-in</p>
+<dl class="docutils">
+<dt>def initializePlugin(mobject):</dt>
+<dd><p class="first">mplugin = OpenMayaMPx.MFnPlugin(mobject)
+try:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 1227)</p>
+Unexpected indentation.</div>
+<blockquote>
+mplugin.registerCommand( kPluginCmdName, cmdCreator )</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1228)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="last docutils">
+<dt>except:</dt>
+<dd>sys.stderr.write( &quot;Failed to register command: %sn&quot; % kPluginCmdName )
+raise</dd>
+</dl>
+</dd>
+</dl>
+<p># Uninitialize the script plug-in</p>
+<dl class="docutils">
+<dt>def uninitializePlugin(mobject):</dt>
+<dd><p class="first">mplugin = OpenMayaMPx.MFnPlugin(mobject)
+try:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 1238)</p>
+Unexpected indentation.</div>
+<blockquote>
+mplugin.deregisterCommand( kPluginCmdName )</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1239)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="last docutils">
+<dt>except:</dt>
+<dd>sys.stderr.write( &quot;Failed to unregister command: %sn&quot; % kPluginCmdName )</dd>
+</dl>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1241)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>(u&quot;C:/Users/Luke/Documents/maya/2014-x64/prefs/scriptEditorTemp/myFirstPlugin.py&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Users/Luke/Documents/maya/2014-x64/prefs/scriptEditorTemp/myFirstPlugin.py #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AbcExport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AbcExport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AbcImport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AbcImport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ArubaTessellator.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ArubaTessellator.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AutodeskPacketFile.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/AutodeskPacketFile.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/DirectConnect.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/DirectConnect.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/Fur.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/Fur.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/MayaMuscle.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/MayaMuscle.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/OneClick.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/OneClick.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/OpenEXRLoader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/OpenEXRLoader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/Turtle.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/Turtle.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/VectorRender.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/VectorRender.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/animImportExport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/animImportExport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/atomImportExport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/atomImportExport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/autoLoader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/autoLoader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/bullet.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/bullet.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/cgfxShader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/cgfxShader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/cleanPerFaceAssignment.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/cleanPerFaceAssignment.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/clearcoat.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/clearcoat.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ddsFloatReader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ddsFloatReader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/dgProfiler.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/dgProfiler.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/dx11Shader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/dx11Shader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/fbxmaya.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/fbxmaya.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/fltTranslator.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/fltTranslator.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ge2Export.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ge2Export.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/gpuCache.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/gpuCache.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/hlslShader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/hlslShader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ik2Bsolver.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ik2Bsolver.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ikSpringSolver.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/ikSpringSolver.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/matrixNodes.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/matrixNodes.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/mayaCharacterization.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/mayaCharacterization.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/mayaHIK.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/mayaHIK.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/melProfiler.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/melProfiler.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/modelingToolkit.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/modelingToolkit.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/nearestPointOnMesh.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/nearestPointOnMesh.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/objExport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/objExport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/openInventor.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/openInventor.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/quatNodes.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/quatNodes.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/retargeterNodes.py&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/retargeterNodes.py #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/rotateHelper.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/rotateHelper.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/rtgExport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/rtgExport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/sceneAssembly.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/sceneAssembly.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/stereoCamera.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/stereoCamera.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/studioImport.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/studioImport.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/testExamples.nll.dll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/testExamples.nll.dll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/tiffFloatReader.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/tiffFloatReader.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/bin/plug-ins/vrml2Export.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/bin/plug-ins/vrml2Export.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/mentalrayForMaya2014/plug-ins/Mayatomr.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/mentalrayForMaya2014/plug-ins/Mayatomr.mll #</p>
+<p>(u&quot;C:/Program Files/Autodesk/Maya2014/substance/plug-ins/Substance.mll&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Program Files/Autodesk/Maya2014/substance/plug-ins/Substance.mll #</p>
+<p>cmds.polyCube()</p>
+<p># Result: [u'pCube4', u'polyCube4'] #</p>
+<p>cmds.select('pCube4.e[0,31]')</p>
+<p>cmds.polySplitRing(sma=180, wt=0.2)</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube4.e[0,31] is invalid #</p>
+<p>cmds.select('pCube4.e[0,31]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube4.e[0,31] is invalid #</p>
+<p>cmds.select('pCube1.e[0:3]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Result: [u'polySplitRing1'] #</p>
+<p>spiRan = random.choice(lisx)</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Warning: Can't perform polySplitRing2 on selection #</p>
+<p>cmds.select('pCube4.e[0,3]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube4.e[0,3] is invalid #</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Warning: Can't perform polySplitRing3 on selection #</p>
+<p># Result: [u'polySplitRing3'] #</p>
+<p>cmds.polyCube( n='plg', w=5, h=5, d=5 )</p>
+<p># Result: [u'plg', u'polyCube5'] #</p>
+<p>cmds.scale( 2, 2, 2 )</p>
+<p>cmds.select( 'plg' )</p>
+<p>cmds.polyOptions( ao=True, dv='true' )</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Invalid arguments for flag 'dv'.  Expected int, got str #</p>
+<p>cmds.polySubdivideEdge( dv=4 )</p>
+<p># Result: [u'polySubdEdge1'] #</p>
+<p>cmds.polySubdivideEdge( dv=4, s=1.5 )</p>
+<p># Result: [u'polySubdEdge2'] #</p>
+<p>cmds.polySubdivideEdge( dv=4, s=2, ws=True )</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Error retrieving default arguments #</p>
+<p>cmds.polySubdivideEdge( dv=4, s=2, ws=True )</p>
+<p># Result: [u'polySubdEdge3'] #</p>
+<p>cmds.polyPlane( name='p', ch=False )</p>
+<p># Result: [u'p'] #</p>
+<p>cmds.select(n='p')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Invalid flag 'n' #</p>
+<p>cmds.select('p')</p>
+<p>cmds.select('p')</p>
+<p>cmds.select('p')</p>
+<p>cmds.dataStructure( format='raw', asString='name=IdStruct:int32=ID' )</p>
+<p># Result: IdStruct #</p>
+<p>cmds.dataStructure( format='raw', asString='name=OffStruct:float=Offset' )</p>
+<p># Result: OffStruct #</p>
+<p>cmds.dataStructure( format='raw', asString='name=OrgStruct:float[3]=Origin Point' )</p>
+<p># Result: OrgStruct #</p>
+<p>cmds.addMetadata( query=True, channelType=True )</p>
+<p># Warning: The 'channelType' flag is obsolete. Use 'channelName' instead. #</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Query mode only works with exactly one node selected or using the 'scene' flag. #</p>
+<p>cmds.select('p')</p>
+<p>cmds.addMetadata( query=True, channelType=True )</p>
+<p># Warning: The 'channelType' flag is obsolete. Use 'channelName' instead. #</p>
+<p>cmds.addMetadata( query=True, channelName=True )</p>
+<p>cmds.addMetadata( channelType='vertex', streamName='OffStream', query=True, structure=True )</p>
+<p># Warning: The 'channelType' flag is obsolete. Use 'channelName' instead. #</p>
+<p>cmds.addMetadata( channelName='vertex', streamName='OffStream', query=True, structure=True )</p>
+<p>cmds.addMetadata( channelType='vertex', query=True, streamName=True )</p>
+<p># Warning: The 'channelType' flag is obsolete. Use 'channelName' instead. #</p>
+<p>cmds.addMetadata( query=True, streamName=True )</p>
+<dl class="docutils">
+<dt>for stream in streams:</dt>
+<dd>indexType = cmds.addMetadata( channelType='vertex', streamName=stream, query=True, indexType=True )[0]
+print 'Index type on %s is %s' % (stream, indexType)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1600)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'streams' is not defined #</p>
+<p>streams = cmds.addMetadata( channelType='vertex', query=True, streamName=True )</p>
+<p># Warning: The 'channelType' flag is obsolete. Use 'channelName' instead. #</p>
+<dl class="docutils">
+<dt>for stream in streams:</dt>
+<dd>indexType = cmds.addMetadata( channelType='vertex', streamName=stream, query=True, indexType=True )[0]
+print 'Index type on %s is %s' % (stream, indexType)</dd>
+</dl>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: 'NoneType' object is not iterable #</p>
+<p>cmds.polyCreateFacet( p=[(0, 0, 0), (10, 0, 0), (10, 10, 0), (0, 10, 0)] )</p>
+<p># Result: [u'polySurface4', u'polyCreateFace4'] #</p>
+<p>cmds.select('polySurface4')</p>
+<p>cmds.polyAppend(a=[0,(5,-5,0])</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>cmds.polyAppend( a=[0, (5, -5, 0)] )</p>
+<p># Warning: Can't perform polyAppend3 on selection #</p>
+<p># Result: [u'polyAppend3'] #</p>
+<p>currentPanel = cmds.getPanel(withFocus= True)</p>
+<dl class="docutils">
+<dt>if currentPanel != '':</dt>
+<dd>cmds.modelEditor(currentPanel, edit=True, da='smoothShaded', dl='default')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1638)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>cmds.polySphere(n= 'plg', sx= 15, sy= 10 )</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 3: modelEditor: Object 'scriptEditorPanel1' not found. #</p>
+<p>cmds.polyPlane( sx=3, sy=3, name='polyPlane' )</p>
+<p># Result: [u'polyPlane', u'polyPlane3'] #</p>
+<p>cmds.select('polyPlane')</p>
+<p>cmds.polyEvaluate( 'polyPlane', vertex=True )</p>
+<p># Result: 16 #</p>
+<p>(u&quot;C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb #</p>
+<p>(u&quot;C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb #</p>
+<p>(u&quot;C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb&quot;).replace(&quot;\&quot;,&quot;/&quot;);</p>
+<p># Result: C:/Users/Luke/Documents/maya/projects/default/scenes/python.mb #</p>
+<p>cmds.polyCube()</p>
+<p># Result: [u'pCube5', u'polyCube6'] #</p>
+<p>cmds.select('pCube1.e[0:3]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Result: [u'polySplitRing4'] #</p>
+<p>cmds.select('pCube1.e[1:2]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Warning: Can't perform polySplitRing5 on selection #</p>
+<p># Result: [u'polySplitRing5'] #</p>
+<p>lenCube = len(lisx)</p>
+<p>print lenCube</p>
+<p>10</p>
+<p>ranNumz = random.randint(0,lenCube)</p>
+<p>print ranNumz</p>
+<p>3</p>
+<p>ranCuca = len('pCube1')</p>
+<p>print ranCuca</p>
+<p>6</p>
+<p>ranFinal = random.randint(0, ranCuca)</p>
+<p>print ranFinal</p>
+<p>6</p>
+<p>cmds.select('pCube1.e[ranNumz:ranFinal]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube1.e[ranNumz:ranFinal] is invalid #</p>
+<p>cmds.select('pCube1.e[0:ranFinal]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube1.e[0:ranFinal] is invalid #</p>
+<p>cmds.select('pCube1.e[0:1')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube1.e[0:1 is invalid #</p>
+<p>cmds.select('pCube1.e[0:1]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.2)</p>
+<p># Result: [u'polySplitRing6'] #</p>
+<p>cmds.polyCube()</p>
+<p># Result: [u'pCube6', u'polyCube7'] #</p>
+<p>cmds.select('pCube6.e[0:3]')</p>
+<p>import math</p>
+<p>seleMath = math.pi</p>
+<p>print seleMath</p>
+<p>3.14159265359</p>
+<p>shoCua = ranFinal - seleMath</p>
+<p>print shoCua</p>
+<p>2.85840734641</p>
+<p>cmds.select('pCube6.e[shoCua:3]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube6.e[shoCua:3] is invalid #</p>
+<p>cmds.select('pCube6.e[shoCua:3]')</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Object pCube6.e[shoCua:3] is invalid #</p>
+<p>cmds.select('pCube6.e[0:3]')</p>
+<p>cmds.polySplitRing( sma=90, wt=0.8)</p>
+<p># Result: [u'polySplitRing7'] #</p>
+<p>cmds.polySplitRing( sma=180, wt=0.6)</p>
+<p># Warning: Can't perform polySplitRing8 on selection #</p>
+<p># Result: [u'polySplitRing8'] #</p>
+<p>cmds.select('pCube6.e[0:3]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.6)</p>
+<p># Result: [u'polySplitRing9'] #</p>
+<p>cmds.select('pCube6.e[0:3]')</p>
+<p>cmds.polySplitRing( sma=60, wt=0.4)</p>
+<p># Result: [u'polySplitRing10'] #</p>
+<p>cmds.select('pCube6.e[0:2]')</p>
+<p>cmds.polySplitRing( sma=60, wt=0.4)</p>
+<p># Result: [u'polySplitRing11'] #</p>
+<p>import time</p>
+<p>print ('hello')</p>
+<p>time.sleep(5)</p>
+<p>print ('world')</p>
+<p>hello</p>
+<p>world</p>
+<p>x = 0</p>
+<dl class="docutils">
+<dt>if x = 10:</dt>
+<dd>print ('I am 10')</dd>
+<dt>else:</dt>
+<dd>print ('I am not 10')
+x + 1</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1849)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<p>x = 0</p>
+<dl class="docutils">
+<dt>if x = 10:</dt>
+<dd>print ('I am 10')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1855)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>if x = 10:</dt>
+<dd>print ('I am 10')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1859)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p># Error: line 1: invalid syntax #</p>
+<dl class="docutils">
+<dt>if x == 10:</dt>
+<dd>print ('I am 10')</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1863)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>cmds.select('pCube1.e[4:6]')</p>
+<ol class="arabic simple" start="0">
+<li></li>
+</ol>
+<p># Result: 0.0 #</p>
+<p>cmds.polySplitRing( sma=90, wt=0.2)</p>
+<p># Result: [u'polySplitRing12'] #</p>
+<p>cmds.select('pCube1.e[4:6]')</p>
+<p>cmds.polySplitRing( sma=180, wt=0.6)</p>
+<p># Warning: Can't perform polySplitRing13 on selection #</p>
+<p># Result: [u'polySplitRing13'] #</p>
+<p>cmds.polyCylinder( r=1, h=2, sx=20, sy=1, sz=1, ax=(0, 1, 0), cuv=1, ch=1, name='pCylA' )</p>
+<p># Result: [u'pCylA', u'polyCylinder1'] #</p>
+<p>cmds.select('pCylA')</p>
+<p>cmds.select('pCylA')</p>
+<p>cmds.polyCut( 'pCylA.f[0:59]', cd='Y', ch=1 )</p>
+<p># Result: [u'polyCut2'] #</p>
+<p>cmds.select( cl=True )</p>
+<p>cmds.polyCylinder( r=1, h=2, sx=20, sy=1, sz=1, ax=(0, 1, 0), cuv=1, ch=1, name='pCylB' )</p>
+<p># Result: [u'pCylB', u'polyCylinder2'] #</p>
+<p>cmds.move( 3, 0, 0, r=True )</p>
+<p>cmds.polyCut( 'pCylB.f[0:59]', cd='Y', df=1, ch=1 )</p>
+<p># Result: [u'polyCut3'] #</p>
+<p>cmds.polyCylinder( r=1, h=2, sx=4, sy=1, sz=1, ax=(0, 1, 0), cuv=1, ch=1, name='pCylB' )</p>
+<p># Result: [u'pCylB1', u'polyCylinder3'] #</p>
+<p>cmds.polyCut( 'pCylB.f[0:30]', cd='Y', df=1, ch=1 )</p>
+<p># Result: [u'polyCut4'] #</p>
+<p>cmds.polyCut( 'pCylB1.f[0:20]', cd='Y', df=1, ch=1 )</p>
+<p># Result: [u'polyCut5'] #</p>
+<p>cmds.polyCut( 'pCylB1.f[-10:0]', cd='Y', df=1, ch=1 )</p>
+<p># Result: [u'polyCut6'] #</p>
+<p>cmds.polyCut( 'pCylB1.f[0:10]', cd='X', df=1, ch=1 )</p>
+<p># Result: [u'polyCut6'] #</p>
+<p>cmds.polyCut( 'pCylB1.f[0:20]', cd='Z', df=1, ch=1 )</p>
+<p># Result: [u'polyCut6'] #</p>
+<p>cmds.polyCut( 'pCylB1.f[5:10]', cd='Z', df=1, ch=1 )</p>
+<p># Result: [u'polyCut6'] #</p>
+<p>cmds.polyCrease( value=0.9 )</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Maya command error #</p>
+<p>cmds.polyCrease( value=0.9 )</p>
+<p>cmds.polyPlane( n='plg', w=5, h=5 )</p>
+<p># Result: [u'plg1', u'polyPlane4'] #</p>
+<p>cmds.delete( 'plg.f[20:29]' )</p>
+<p>cmds.polyPlane( n='plg', w=5, h=5 )</p>
+<p># Result: [u'plg2', u'polyPlane5'] #</p>
+<p>cmds.delete( 'plg2.f[20:29]' )</p>
+<p>cmds.polySelect( 'plg', edgeRing=1 )</p>
+<p># Result: [1, 229] #</p>
+<p>cmds.polySelect('pCube1', edgeRing=[0,50])</p>
+<p># Result: [0] #</p>
+<p>cmds.polySelect( 'plg', toggle=True, edgeRingPath=(1, 10) )</p>
+<p>cmds.polySelect( 'plg', toggle=True, edgeRingPath=(1, 10) )</p>
+<p>cmds.polySelect( 'pPlane1', shortestEdgePath=(10, 100) )</p>
+<p># Error: line 1: Input vertices are not present on the polygonal object. #</p>
+<p>cmds.polySelect( 'plc', shortestEdgePath=(10, 100) )</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: No object matches name: plc #</p>
+<p>cmds.polySelect( 'plg', shortestEdgePath=(10, 100) )</p>
+<p># Result: [151, 213, 150, 46, 47, 10, 52, 53, 54, 55, 0, 12, 13] #</p>
+<p>cmds.polyPlane( n='plg1', sx=5, sy=5, w=5, h=5 )</p>
+<p># Result: [u'plg3', u'polyPlane6'] #</p>
+<p>cmds.select('plg3')</p>
+<p>cmds.move(3,3,3)</p>
+<p>cmds.polyMoveVertex( 'plg1.vtx[7]', 'plg1.vtx[10]', 'plg1.vtx[25]', 'plg1.vtx[28]', ltz=1 )</p>
+<p># Result: [u'polyMoveVertex1'] #</p>
+<p>cmds.polyTriangulate( 'plg1.f[0:1]', 'plg1.f[5:6]', 'plg1.f[3:4]', 'plg1.f[8:9]', 'plg1.f[15:16]', 'plg1.f[20:21]', 'plg1.f[18:19]', 'plg1.f[23:24]' )</p>
+<p># Result: [u'polyTriangulate1'] #</p>
+<p>cmds.polyTriangulate( 'plg1.f[0:50]', 'plg1.f[5:50]', 'plg1.f[3:50]', 'plg1.f[8:50]', 'plg1.f[15:50]', 'plg1.f[20:50]', 'plg1.f[18:50]', 'plg1.f[23:50]' )</p>
+<p># Result: [u'polyTriangulate2'] #</p>
+<p>cmds.polyTriangulate()</p>
+<p># Result: [u'polyTriangulate3'] #</p>
+<p>cmds.polyBoolOp()</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Error retrieving default arguments #</p>
+<p>cmds.polyBoolOp(op=1, n='result1' )</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Error retrieving default arguments #</p>
+<p>cmds.polyPlane( n='plg', w=10, h=10 )</p>
+<p># Result: [u'plg4', u'polyPlane7'] #</p>
+<p>cmds.polyChipOff( 'plg.f[71:72]', 'plg.f[81:82]', dup=True, ltz=1 )</p>
+<p># Result: [u'polyChipOff1'] #</p>
+<p>cmds.polyChipOff( 'plg.f[11:12]', 'plg.f[21:22]', dup=False, ty=1 )</p>
+<p># Result: [u'polyChipOff2'] #</p>
+<p>cmds.polyChipOff( 'plg.f[15:16]', 'plg.f[23:24]', dup=False, kft=False, ls=(.5, .5, 0) )</p>
+<p># Result: [u'polyChipOff3'] #</p>
+<p>cmds.polyChipOff( 'plg.f[0:74]', 'plg.f[0:84]', dup=False, kft=True, ls=(.5, .5, 0) )</p>
+<p># Result: [u'polyChipOff4'] #</p>
+<p>cmds.polyClipboard( copy=True, uv=True, color=True, shader=True )</p>
+<p># Warning: Incorrect number of items selected. Can only copy attributes from one face component item to the clipboard. #</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Maya command error #</p>
+<p>cmds.polyClipboard()</p>
+<p># Warning: No action specified to perform with the clipboard. #</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Maya command error #</p>
+<p>cmds.polyClipboard(copy=True)</p>
+<p># Warning: No attributes specified for clipboard operation. #</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Maya command error #</p>
+<p>cmds.select( 'plg1.e[26]', 'plg1.e[28]', 'plg1.e[30]', 'plg1.e[32]', 'plg1.e[34]', 'plg1.e[36]', 'plg1.e[38]', 'plg1.e[47]', 'plg1.e[49]', 'plg1.e[51]', 'plg1.e[53]', 'plg1.e[55]', 'plg1.e[57]', 'plg1.e[59]' )</p>
+<p>cmds.polyCut(cd='Y', ch=1 )</p>
+<p># Result: [u'polyCut7'] #</p>
+<p>cmds.polyCut(cd='Y', ch=1 )</p>
+<p># Result: [u'polyCut8'] #</p>
+<p>cmds.polyCut( 'pCylA.f[0:59]', cd='Z', ch=1 )</p>
+<p># Result: [u'polyCut9'] #</p>
+<p>cmds.polyCut( 'pCylA.f[0:59]', cd='Z', ch=1 )</p>
+<p># Result: [u'polyCut10'] #</p>
+<p>cmds.select('pCylA')</p>
+<p>cmds.select('pCylA')</p>
+<p>cmds.polyDuplicateEdge(of=0.5)</p>
+<p># Result: [u'polyDuplicateEdge1'] #</p>
+<p>cmds.polyDuplicateAndConnect</p>
+<p># Result: &lt;built-in method polyduplicateandconnect of module object at&gt; #</p>
+<p>cmds.polyDuplicateAndConnect()</p>
+<p># Result: [u'pCylA1'] #</p>
+<p>cmds.polyDuplicateEdge()</p>
+<p># Result: [u'polyDuplicateEdge2'] #</p>
+<p>cmds.polyDuplicateEdge(e[0,10], of=0.8)</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'e' is not defined #</p>
+<p>cmds.select('pCylA')</p>
+<p>cmds.select('pCylA1')</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=2, ls=(.5, .5, 0) )</p>
+<p># Result: [u'polyExtrudeFace5'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.3, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace6'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.8, ls=(.5, .5, 0) )</p>
+<p># Result: [u'polyExtrudeFace7'] #</p>
+<p>e, ltz=.3, ls=(.2</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>eFacet(kft</p>
+<p># Error: line 1: invalid syntax #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.3, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace9'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.8, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace10'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.5, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace10'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.9, ls=(5, .5, 3) )</p>
+<p># Result: [u'polyExtrudeFace10'] #</p>
+<p>3</p>
+<p># Result: 3 #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.8, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace11'] #</p>
+<p>cmds.polyExtrudeFacet(kft=False, ltz=.3, ls=(.2, .2, 0) )</p>
+<p># Result: [u'polyExtrudeFace12'] #</p>
+<p>cmds.polyTriangulate()</p>
+<p># Result: [u'polyTriangulate4'] #</p>
+<p>cmds.scale(0,5,0)</p>
+<p>cmds.scale(0.5,0,0)</p>
+<p>cmds.scale(50,20,10)</p>
+<p>cmds.scale(10,5,10)</p>
+<p>cmds.scale(1,1,1)</p>
+<p>cmds.scale(1,2,1)</p>
+<p>cmds.scale(2,1,1)</p>
+<p>cmds.scale(1,1,2)</p>
+<p>cmds.scale(1,1,5)</p>
+<p>cmds.scale(5,1,1)</p>
+<p>cmds.scale(5,5,1)</p>
+<p>cmds.scale(1,5,2)</p>
+<p>cmds.polySelect(edgeBorder)</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'edgeBorder' is not defined #</p>
+<p>cmds.polySelect(edgeBorder=[0,3])</p>
+<p>cmds.polySelect(edgeRing=1)</p>
+<p># Result: [1, 38, 42, 8, 16, 19, 11, 58, 54, 3, 22, 26, 1] #</p>
+<p>cmds.polyExtrudeEdge(ch=1, kft=0, pvx=-5.5, pvy=0.0, pvz=6.0 )</p>
+<p># Result: [u'polyExtrudeEdge3'] #</p>
+<p>cmds.move(0, 0, -5, r=True)</p>
+<p>cameraName = cmds.camera()</p>
+<p>cameraShape = cameraName[1]</p>
+<p>focalLength = cmds.camera(cameraShape, q=True, fl=True)</p>
+<p>cmds.camera( cameraShape, e=True, ff='overscan' )</p>
+<p>cmds.camera(cameraShape, rotation=[90,0,0])</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Too many objects or values. #</p>
+<p>cmds.camera(cameraShape, rotation=90,0,0)</p>
+<p># Error: line 1: non-keyword arg after keyword arg #</p>
+<p>cmds.camera(cameraShape, rotation=90)</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Invalid arguments for flag 'rotation'.  Expected ( angle, angle, angle ), got int #</p>
+<p>cmds.camera(cameraShape, shutterAngle=90)</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Too many objects or values. #</p>
+<p>cmds.camera(shutterAngle=90)</p>
+<p># Result: [u'camera2', u'cameraShape2'] #</p>
+<p>import mentalray.textureFileConversionUtils</p>
+<p>homeName = cmds.cameraView(camera='persp')</p>
+<p>cmds.cameraView( homeName, e=True, camera='persp', ab=True )</p>
+<p>cmds.dolly( 'persp', distance=-30 )</p>
+<p>cmds.panZoom( 'persp', r=0.6 )</p>
+<p>cmds.cameraView( panZoomBookmark, e=True, camera='persp', sc=True )</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'panZoomBookmark' is not defined #</p>
+<p>cmds.cameraView( panZoomBookmark, e=True, camera='persp', sc=True )</p>
+<p># Error: line 1: NameError: file &lt;maya console&gt; line 1: name 'panZoomBookmark' is not defined #</p>
+<p>cmds.cameraView( camera='persp', name='zoom', ab=True )</p>
+<p># Result: zoom #</p>
+<p>cmds.cameraView( homeName, e=True, camera='persp', sc=True )</p>
+<p>cmds.dolly( 'persp', distance=-30 )</p>
+<p>cmds.dolly( 'persp', distance=30 )</p>
+<p>cmds.roll( 'persp', abs=True, d=0 )</p>
+<p>cmds.roll( 'persp', d=90 )</p>
+<p>cmds.setKeyframe()</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Error retrieving default arguments #</p>
+<p>cmds.setKeyframe()</p>
+<p># Result: 10 #</p>
+<p>cmds.currentTime( query=True )</p>
+<p># Result: 1.0 #</p>
+<p>cmds.currentTime( 32, edit=True )</p>
+<p># Result: 32.0 #</p>
+<p>cmds.move(0,5,0)</p>
+<p>cmds.setKeyframe()</p>
+<p># Result: 10 #</p>
+<p>cmds.currentTime( 32*2, edit=True )</p>
+<p># Result: 64.0 #</p>
+<p>cmds.currentTime( 0, edit=True )</p>
+<p># Result: 0.0 #</p>
+<p>cmds.copyKey()</p>
+<p># Result: 10 #</p>
+<p>cmds.currentTime( 64, edit=True )</p>
+<p># Result: 64.0 #</p>
+<p>cmds.pasteKey()</p>
+<p># Result: 10 #</p>
+<p>cmds.currentTime( 1, edit=True )</p>
+<p># Result: 1.0 #</p>
+<p>cmds.copyKey()</p>
+<p># Result: 10 #</p>
+<p>cmds.currentTime( 64, edit=True )</p>
+<p># Result: 64.0 #</p>
+<p>cmds.pasteKey()</p>
+<p># Error: line 1: TypeError: file &lt;maya console&gt; line 1: Error retrieving default arguments #</p>
+<p>import time</p>
+<p>cmds.recordDevice( device='clock', duration=30 )</p>
+<p># Error: line 1: RuntimeError: file C:Program FilesAutodeskMaya2014Pythonlibsite-packagesmayaappcommands.py line 19: No such device: clock #</p>
+<p>cmds.applyTake()</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: No devices with recorded takes were found. #</p>
+<p>cmds.joint( p=(0, 0, 0) )</p>
+<p># Result: joint1 #</p>
+<p>cmds.joint( p=(0, 4, 0)  )</p>
+<p># Result: joint2 #</p>
+<p>cmds.joint( 'joint1', e=True, zso=True, oj='xyz' )</p>
+<p>cmds.joint( p=(0, 8, -1) )</p>
+<p># Result: joint3 #</p>
+<p>cmds.joint( 'joint2', e=True, zso=True, oj='xyz' )</p>
+<p>cmds.joint( lz=('-90deg', '90deg'), p=(0, 8, 4) )</p>
+<p># Result: joint4 #</p>
+<p>cmds.joint( edit=True, lz=('-90deg', '90deg'), lsz=False )</p>
+<p>cmds.currentTime( 0 )</p>
+<p>cmds.setKeyframe( 'joint3.rx' )</p>
+<p>cmds.currentTime( 10 )</p>
+<p>cmds.setKeyframe( 'joint3.rx', v=90 )</p>
+<p>cmds.currentTime( 20 )</p>
+<p>cmds.setKeyframe( 'joint3.rx', v=0 )</p>
+<p>cmds.clip( 'arm', startTime=0, endTime=20, name='handWave' )</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: No object matches name: arm #</p>
+<p>cmds.clip(startTime=0, endTime=20, name='handWave' )</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: Must select a single character or a clip library. #</p>
+<p>cmds.character( name='arm' )</p>
+<p># Result: arm #</p>
+<p>cmds.clip( 'arm', startTime=0, endTime=20, name='handWave' )</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: No clip created since character has no keys. #</p>
+<p>cmds.select( 'joint3', r=True )</p>
+<p>cmds.currentTime( 0 )</p>
+<p>cmds.setKeyframe( 'joint3.rx' )</p>
+<p>cmds.currentTime( 10 )</p>
+<p>cmds.setKeyframe( 'joint3.rx', v=90 )</p>
+<p>cmds.currentTime( 20 )</p>
+<p>cmds.setKeyframe( 'joint3.rx', v=0 )</p>
+<p>cmds.clip( 'arm', startTime=0, endTime=20, name='handWave' )</p>
+<p># Error: line 1: RuntimeError: file &lt;maya console&gt; line 1: No clip created since character has no keys. #</p>
+<p>cmds.play( forward=True )</p>
+<p># Press the ESC key to stop playback. #</p>
+<p>cmds.play( state=False )</p>
+<p>cmds.select('cameraShape')</p>
+<p># Error: line 1: ValueError: file &lt;maya console&gt; line 1: No object matches name: cameraShape #</p>
+<p>cameraName = cmds.camera()</p>
+<p>cameraShape = cameraName[1]</p>
+<p>cmds.move(1,0,1)</p>
+<p>cmds.setKeyframe()</p>
+<p># Result: 18 #</p>
+<p>light = cmds.ambientLight(intensity=0.8)</p>
+<p>cmds.ambientLight( light, e=True, intensity=0.5 )</p>
+<p># Result:  #</p>
+<p>import mentalray.textureFileConversionUtils</p>
+<p>import mentalray.textureFileConversionUtils</p>
+<p>[/prettify]&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/built-in&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/bob&gt;&lt;/bob&gt;&lt;/http:&gt;&lt;/built-in&gt;&lt;/http:&gt;&lt;/http:&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/function&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/built-in&gt;&lt;/maya&gt;&lt;/function&gt;&lt;/function&gt;&lt;/function&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/maya&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</p>

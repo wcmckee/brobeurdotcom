@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Black Bars and Text: Suburb Nightmare | brobeur</title>
+
+    
+            <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+
+    
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+
+      <link rel="canonical" href="http://brobuer.com/posts/black-bars-and-text-suburb-nightmare.html">
+
+
+
+
+    
+        <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+
+
+
+
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Black Bars and Text: Suburb Nightmare</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Posted: <time class="published" datetime="2013-12-11T11:45:42+00:00">2013-12-11 11:45</time>
+               [<a href="black-bars-and-text-suburb-nightmare.rst" id="sourcelink">Source</a>]
+        </span>
+        <br>
+        <span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<p>&lt;html&gt;&lt;body&gt;&lt;p&gt;I've continued to work on my image script, this time focusing more into creating rectangle and text.</p>
+<p>I really want to create a television show in a game format. Doing the whole black bars the top and bottom of the screen really excites me. Text and color is also up there.</p>
+<p>I added a creation of rectangle to the script - one at the top, and another at the bottom.</p>
+<p>[prettify=python]</p>
+<p>from PIL import ImageDraw</p>
+<p>draw.rectangle([(0, 0), (1920, 150)], fill='black')</p>
+<p>draw = ImageDraw.Draw(lightFilz)</p>
+<p>draw.rectangle([(0, 500), (1920, 1080)], fill='black')</p>
+<p>[/prettify]</p>
+<p>I have also added text.</p>
+<p>[prettify=python]</p>
+<p>import ImageFont, ImageDraw</p>
+<p>import random</p>
+<p>cRan = random.randint(1,30)</p>
+<p>draw = ImageDraw.Draw(lightFilz)</p>
+<p># use a truetype font</p>
+<p>font = ImageFont.truetype("cs.ttf", 24)</p>
+<p>draw.text((100, 200), "a film by William Mckee", fill=(49,cRan,2),font=font)</p>
+<p>draw.text((400, 300), 'Suburb Nightmare: Mist City', fill =(49,3,cRan),font=font)</p>
+<p>draw.text((600, 400), 'sound by blah blah', fill=(cRan,3,2), font=font)</p>
+<p>[/prettify]</p>
+<p>Here's some results:</p>
+<p>&lt;a href="/wp-content/uploads/2013/12/street0303.jpg"&gt;&lt;img class="alignnone size-large wp-image-602" alt="street0303" src="/wp-content/uploads/2013/12/street0303-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0390.jpg"&gt;&lt;img class="alignnone size-large wp-image-603" alt="street0390" src="/wp-content/uploads/2013/12/street0390-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0425.jpg"&gt;&lt;img class="alignnone size-large wp-image-604" alt="street0425" src="/wp-content/uploads/2013/12/street0425-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0682.jpg"&gt;&lt;img class="alignnone size-large wp-image-605" alt="street0682" src="/wp-content/uploads/2013/12/street0682-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0736.jpg"&gt;&lt;img class="alignnone size-large wp-image-606" alt="street0736" src="/wp-content/uploads/2013/12/street0736-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0845.jpg"&gt;&lt;img class="alignnone size-large wp-image-607" alt="street0845" src="/wp-content/uploads/2013/12/street0845-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street0853.jpg"&gt;&lt;img class="alignnone size-large wp-image-608" alt="street0853" src="/wp-content/uploads/2013/12/street0853-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street1360.jpg"&gt;&lt;img class="alignnone size-large wp-image-609" alt="street1360" src="/wp-content/uploads/2013/12/street1360-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street1984.jpg"&gt;&lt;img class="alignnone size-large wp-image-610" alt="street1984" src="/wp-content/uploads/2013/12/street1984-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street2537.jpg"&gt;&lt;img class="alignnone size-large wp-image-611" alt="street2537" src="/wp-content/uploads/2013/12/street2537-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street2891.jpg"&gt;&lt;img class="alignnone size-large wp-image-612" alt="street2891" src="/wp-content/uploads/2013/12/street2891-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street2895.jpg"&gt;&lt;img class="alignnone size-large wp-image-613" alt="street2895" src="/wp-content/uploads/2013/12/street2895-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street2965.jpg"&gt;&lt;img class="alignnone size-large wp-image-614" alt="street2965" src="/wp-content/uploads/2013/12/street2965-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street3204.jpg"&gt;&lt;img class="alignnone size-large wp-image-615" alt="street3204" src="/wp-content/uploads/2013/12/street3204-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street3844.jpg"&gt;&lt;img class="alignnone size-large wp-image-616" alt="street3844" src="/wp-content/uploads/2013/12/street3844-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street3941.jpg"&gt;&lt;img class="alignnone size-large wp-image-617" alt="street3941" src="/wp-content/uploads/2013/12/street3941-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street4825.jpg"&gt;&lt;img class="alignnone size-large wp-image-618" alt="street4825" src="/wp-content/uploads/2013/12/street4825-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt; &lt;a href="/wp-content/uploads/2013/12/street4871.jpg"&gt;&lt;img class="alignnone size-large wp-image-619" alt="street4871" src="/wp-content/uploads/2013/12/street4871-1024x576.jpg" width="1024" height="576"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</p>
+</div>
+    
+        <ul class="pager">
+            <li class="previous">
+                <a href="skins-wire-python-image-library.html" rel="prev" title="Skins Wire: Python Image Library">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="692.html" rel="next" title="None">Next post</a>
+            </li>
+        </ul>
+
+        
+
+    
+
+    </div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://brobuer.com/" title="brobeur">brobeur</a>
+            </h1>
+            
+            
+            <ul class="unstyled">
+            <li>
+            
+                <li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+        </div>
+        <div id="footer">
+            Contents © 2015         <a href="mailto:n.tesla@example.com">wcmckee</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../assets/js/all-nocdn.js"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    
+    
+    
+</body>
+</html>

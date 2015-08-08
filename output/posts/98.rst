@@ -1,0 +1,12 @@
+<html><body><p>Today was spent in Wellington but I did wakeup at 4 and work on scenes.  I had the art assets that I modelled last night - it was just about creating a composition and adding new script (which didn't really happen).  
+The player model was from a previous project so was quick to replace it with the player model that I had  modelled in blender. 
+
+I created a total of 4 scenes - all third person, fixed camera,  where the player can walk left,  and right. 
+
+I have a moving cube script  that I use regularly.  I attached this script to the blue cube. With the right angle it looks like water drifting in and out.  Perfect,  I've created an island. 
+
+I worked on the ui as well. I have  a script that I use for buttons.  Currently they are set to level zero,  one,  two,  three etc.  I'll like to rework these and instead include them on the main title scene.  An idea is to call them different parts of Pronto Island.  This adds story and depth to the world. 
+
+Today I've spent the day in Wellington,  walking and drawing mostly.  The three drawings I did are going to be used as concept art pieces in Pronto Island.  I'm excited to arriving home and working on new assets. 
+
+I'm happy with</p></body></html>

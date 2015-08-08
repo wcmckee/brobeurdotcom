@@ -1,0 +1,44 @@
+<html><body><p> 
+
+
+</p><p style="text-align: center;">
+
+<canvas style="border: 1px solid #c3c3c3;" width="500" height="100"> Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+
+
+
+</p><h1 style="font-family:monospace;color:#d9af3e;font-size:48px;text-align:center">Bro Beur Studios</h1>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">// <![CDATA[
+
+var c=document.getElementById("myCanvas");
+
+var ctx=c.getContext("2d");
+
+ctx.fillStyle="#b3df2a";
+
+ctx.fillRect(50,10,500,60);
+
+var ctd=c.getContext("2d");
+
+ctd.fillStyle="#111111";
+
+ctd.fillRect(300,0,50,100);
+
+// ]]></script>
+
+
+
+ </body></html>

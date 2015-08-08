@@ -1,0 +1,41 @@
+<html><head><script type="text/javascript">// <![CDATA[
+ function draw()
+{
+
+
+ var rxt = document.getElementById('canvas').getContext('2d');
+
+ var IMG = new Image();
+
+ IMG.src = 'image/untitled.GIF';
+
+ IMG.onload = function()
+{
+
+
+ for (i=0;i<4;i++)
+{
+
+
+ for (j=0;j<3;j++)
+{
+
+
+ rxt.drawImage(IMG,j*200,i*160,300,300);
+
+
+}
+
+
+
+}
+
+
+
+}
+
+
+
+}
+
+// ]]></script></head></html>
