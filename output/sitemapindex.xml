@@ -5,15 +5,15 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://brobuer.com/galleries/rss.xml</loc>
-  <lastmod>2015-08-07</lastmod>
+  <loc>http://brobeur.com/blog/output/galleries/rss.xml</loc>
+  <lastmod>2015-08-12</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brobuer.com/rss.xml</loc>
-  <lastmod>2015-08-07</lastmod>
+  <loc>http://brobeur.com/blog/output/rss.xml</loc>
+  <lastmod>2015-08-12</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://brobuer.com/sitemap.xml</loc>
-  <lastmod>2015-08-07</lastmod>
+  <loc>http://brobeur.com/blog/output/sitemap.xml</loc>
+  <lastmod>2015-08-12</lastmod>
  </sitemap>
 </sitemapindex>

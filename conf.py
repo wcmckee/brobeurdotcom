@@ -18,15 +18,15 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "wcmckee"  # (translatable)
-BLOG_TITLE = "brobeur"  # (translatable)
+BLOG_TITLE = "BroBeur"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://brobuer.com/"
+SITE_URL = "http://brobeur.com/blog/output"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://getnikola.com/"
-BLOG_EMAIL = "n.tesla@example.com"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+BLOG_EMAIL = "hammersmake@gmail.com"
+BLOG_DESCRIPTION = "Blog for BroBeur Studios"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -260,7 +260,7 @@ ONE_FILE_POSTS = False
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-# LOGO_URL = ''
+LOGO_URL = '/logo.png'
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
@@ -587,9 +587,14 @@ RSS_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = ""
+
 # I recommend using the Creative Commons' wizard:
 # http://creativecommons.org/choose/
+LICENSE = """
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons Attribution 4.0 International License"
+style="border-width:0; margin-bottom:12px;"
+src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>"""
 # LICENSE = """
 # <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 # <img alt="Creative Commons License BY-NC-SA"
@@ -743,7 +748,7 @@ COMMENT_SYSTEM_ID = ""
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
 # (translatable)
-# SOCIAL_BUTTONS_CODE = """
+SOCIAL_BUTTONS_CODE = " "
 # <!-- Social buttons -->
 # <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 # <a class="addthis_button_more">Share</a>

@@ -1,2 +1,2 @@
-Sitemap: http://brobuer.com/sitemapindex.xml
+Sitemap: http://brobeur.com/blog/sitemapindex.xml
 
