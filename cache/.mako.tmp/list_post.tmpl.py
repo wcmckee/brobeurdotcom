@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1439347320.299879
+_modified_time = 1439353972.606154
 _enable_loop = True
 _template_filename = u'/usr/local/lib/python2.7/dist-packages/nikola/data/themes/base/templates/list_post.tmpl'
-_template_uri = 'list_post.tmpl'
+_template_uri = u'list_post.tmpl'
 _source_encoding = 'utf-8'
 _exports = [u'content']
 
