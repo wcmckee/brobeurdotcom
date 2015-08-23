@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1439353972.606154
+_modified_time = 1440369075.596252
 _enable_loop = True
-_template_filename = u'/usr/local/lib/python2.7/dist-packages/nikola/data/themes/base/templates/list_post.tmpl'
-_template_uri = u'list_post.tmpl'
+_template_filename = u'/usr/lib/python2.7/dist-packages/nikola/data/themes/base/templates/list_post.tmpl'
+_template_uri = 'list_post.tmpl'
 _source_encoding = 'utf-8'
 _exports = [u'content']
 
@@ -29,9 +29,9 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def content():
             return render_content(context._locals(__M_locals))
-        date_format = context.get('date_format', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
         title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer(u'\n\n')
@@ -50,9 +50,9 @@ def render_content(context,**pageargs):
     try:
         def content():
             return render_content(context)
-        date_format = context.get('date_format', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
         title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer(u'\n<article class="listpage">\n    <header>\n        <h1>')
@@ -68,7 +68,7 @@ def render_content(context,**pageargs):
                 __M_writer(u'</a> <time class="listdate" datetime="')
                 __M_writer(unicode(post.date.isoformat()))
                 __M_writer(u'" title="')
-                __M_writer(unicode(post.formatted_date(date_format)))
+                __M_writer(unicode(messages("Publication date")))
                 __M_writer(u'">')
                 __M_writer(unicode(post.formatted_date(date_format)))
                 __M_writer(u'</time></li>\n')
@@ -85,6 +85,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "line_map": {"26": 0, "37": 2, "42": 19, "48": 4, "58": 4, "59": 7, "60": 7, "61": 9, "62": 10, "63": 11, "64": 12, "65": 12, "66": 12, "67": 12, "68": 12, "69": 12, "70": 12, "71": 12, "72": 12, "73": 12, "74": 12, "75": 14, "76": 15, "77": 16, "78": 16, "79": 16, "80": 18, "86": 80}, "uri": "list_post.tmpl", "filename": "/usr/local/lib/python2.7/dist-packages/nikola/data/themes/base/templates/list_post.tmpl"}
+{"source_encoding": "utf-8", "line_map": {"26": 0, "37": 2, "42": 19, "48": 4, "58": 4, "59": 7, "60": 7, "61": 9, "62": 10, "63": 11, "64": 12, "65": 12, "66": 12, "67": 12, "68": 12, "69": 12, "70": 12, "71": 12, "72": 12, "73": 12, "74": 12, "75": 14, "76": 15, "77": 16, "78": 16, "79": 16, "80": 18, "86": 80}, "uri": "list_post.tmpl", "filename": "/usr/lib/python2.7/dist-packages/nikola/data/themes/base/templates/list_post.tmpl"}
 __M_END_METADATA
 """

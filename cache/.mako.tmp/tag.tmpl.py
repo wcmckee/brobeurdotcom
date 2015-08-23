@@ -4,9 +4,9 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1439353972.563471
+_modified_time = 1440369075.654457
 _enable_loop = True
-_template_filename = u'/usr/local/lib/python2.7/dist-packages/nikola/data/themes/base/templates/tag.tmpl'
+_template_filename = u'/usr/lib/python2.7/dist-packages/nikola/data/themes/base/templates/tag.tmpl'
 _template_uri = u'tag.tmpl'
 _source_encoding = 'utf-8'
 _exports = [u'content', u'extra_head']
@@ -30,7 +30,6 @@ def render_body(context,**pageargs):
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
         kind = context.get('kind', UNDEFINED)
-        description = context.get('description', UNDEFINED)
         parent = context.get('parent', UNDEFINED)
         title = context.get('title', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
@@ -65,7 +64,6 @@ def render_content(context,**pageargs):
     try:
         generate_rss = context.get('generate_rss', UNDEFINED)
         kind = context.get('kind', UNDEFINED)
-        description = context.get('description', UNDEFINED)
         title = context.get('title', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
@@ -79,12 +77,7 @@ def render_content(context,**pageargs):
         __M_writer = context.writer()
         __M_writer(u'\n<article class="tagpage">\n    <header>\n        <h1>')
         __M_writer(unicode(title))
-        __M_writer(u'</h1>\n')
-        if description:
-            __M_writer(u'        <p>')
-            __M_writer(unicode(description))
-            __M_writer(u'</p>\n')
-        __M_writer(u'        <div class="metadata">\n')
+        __M_writer(u'</h1>\n        <div class="metadata">\n')
         if len(translations) > 1 and generate_rss:
             for language in translations:
                 __M_writer(u'                <p class="feedlink">\n                    <a href="')
@@ -113,7 +106,7 @@ def render_content(context,**pageargs):
                 __M_writer(u'</a> <time class="listdate" datetime="')
                 __M_writer(unicode(post.date.isoformat()))
                 __M_writer(u'" title="')
-                __M_writer(unicode(post.formatted_date(date_format)))
+                __M_writer(unicode(messages("Publication date")))
                 __M_writer(u'">')
                 __M_writer(unicode(post.formatted_date(date_format)))
                 __M_writer(u'</time></li>\n')
@@ -166,6 +159,6 @@ def render_extra_head(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "line_map": {"140": 4, "141": 5, "142": 5, "143": 6, "144": 7, "145": 8, "146": 8, "147": 8, "148": 8, "149": 8, "150": 8, "151": 8, "152": 8, "153": 8, "26": 0, "155": 11, "156": 11, "154": 10, "158": 11, "159": 11, "160": 11, "161": 11, "167": 161, "47": 2, "157": 11, "52": 13, "57": 43, "63": 16, "80": 16, "81": 19, "82": 19, "83": 20, "84": 21, "85": 21, "86": 21, "87": 23, "88": 24, "89": 25, "90": 26, "91": 27, "92": 27, "93": 27, "94": 27, "95": 27, "96": 27, "97": 27, "98": 27, "99": 30, "100": 31, "101": 31, "102": 31, "103": 31, "104": 31, "105": 33, "106": 35, "107": 36, "108": 37, "109": 38, "110": 38, "111": 38, "112": 38, "113": 38, "114": 38, "115": 38, "116": 38, "117": 38, "118": 38, "119": 38, "120": 40, "121": 42, "127": 4}, "uri": "tag.tmpl", "filename": "/usr/local/lib/python2.7/dist-packages/nikola/data/themes/base/templates/tag.tmpl"}
+{"source_encoding": "utf-8", "line_map": {"133": 4, "134": 5, "135": 5, "136": 6, "137": 7, "138": 8, "139": 8, "140": 8, "141": 8, "142": 8, "143": 8, "144": 8, "145": 8, "146": 8, "147": 10, "148": 11, "149": 11, "150": 11, "151": 11, "152": 11, "153": 11, "26": 0, "154": 11, "160": 154, "46": 2, "51": 13, "56": 40, "62": 16, "78": 16, "79": 19, "80": 19, "81": 21, "82": 22, "83": 23, "84": 24, "85": 24, "86": 24, "87": 24, "88": 24, "89": 24, "90": 24, "91": 24, "92": 27, "93": 28, "94": 28, "95": 28, "96": 28, "97": 28, "98": 30, "99": 32, "100": 33, "101": 34, "102": 35, "103": 35, "104": 35, "105": 35, "106": 35, "107": 35, "108": 35, "109": 35, "110": 35, "111": 35, "112": 35, "113": 37, "114": 39, "120": 4}, "uri": "tag.tmpl", "filename": "/usr/lib/python2.7/dist-packages/nikola/data/themes/base/templates/tag.tmpl"}
 __M_END_METADATA
 """
